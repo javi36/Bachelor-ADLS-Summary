@@ -8,7 +8,17 @@
   letter-spacing: -0.02em;
 }
 
-/* (Nummerierung direkt im Markdown-Text — erscheint auch im TOC) */
+/* ── Linke Navigationsleiste ausblenden ─────────────────── */
+.md-sidebar--primary {
+  display: none;
+}
+
+/* Inhalt bekommt den freigewordenen Platz */
+@media screen and (min-width: 76.25em) {
+  .md-content {
+    max-width: 860px;
+  }
+}
 
 /* ── H2 Abschnittsüberschriften ─────────────────────────── */
 .md-typeset h2 {
