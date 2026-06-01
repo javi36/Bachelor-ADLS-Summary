@@ -23,5 +23,11 @@ jobs:
       - name: Install MkDocs Material
         run: pip install mkdocs-material mkdocs-jupyter
 
+      - name: Download PDF.js
+        run: |
+          curl -L https://github.com/mozilla/pdf.js/releases/download/v4.4.168/pdfjs-4.4.168-dist.zip -o pdfjs.zip
+          unzip pdfjs.zip -d docs/assets/pdfjs
+          rm pdfjs.zip
+
       - name: Deploy to GitHub Pages
         run: mkdocs gh-deploy --force

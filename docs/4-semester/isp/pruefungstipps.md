@@ -41,6 +41,6 @@
 ## Abschluss-Zusammenfassung (SW14)
 
 <div class="pdf-embed">
-  <iframe src="https://docs.google.com/viewer?url=https://javi36.github.io/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW14_Finale.pdf&embedded=true" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
-  <p class="pdf-fallback">📥 <a href="pdfs/SW14_Finale.pdf">PDF herunterladen</a></p>
+  <iframe src="/Bachelor-ADLS-Summary/assets/pdfjs/web/viewer.html?file=/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW14_Finale.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <p class="pdf-fallback">📥 <a href="../pdfs/SW14_Finale.pdf">PDF herunterladen</a></p>
 </div>

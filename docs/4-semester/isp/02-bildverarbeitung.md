@@ -3,8 +3,8 @@
 ## 1. Bildrepräsentation & Farbräume
 
 <div class="pdf-embed">
-  <iframe src="https://docs.google.com/viewer?url=https://javi36.github.io/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW06_DigitalImageProcessing.pdf&embedded=true" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
-  <p class="pdf-fallback">📥 <a href="pdfs/SW06_DigitalImageProcessing.pdf">PDF herunterladen</a></p>
+  <iframe src="/Bachelor-ADLS-Summary/assets/pdfjs/web/viewer.html?file=/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW06_DigitalImageProcessing.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <p class="pdf-fallback">📥 <a href="../pdfs/SW06_DigitalImageProcessing.pdf">PDF herunterladen</a></p>
 </div>
 
 ### Digitale Bilder als Arrays
@@ -43,8 +43,8 @@ Beispiel: 1920×1080 RGB uint8 = 1920 × 1080 × 3 ≈ 6 MB
 ## 2. Bildqualitäts-Attribute
 
 <div class="pdf-embed">
-  <iframe src="https://docs.google.com/viewer?url=https://javi36.github.io/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW07_ImageQuality_Transformations.pdf&embedded=true" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
-  <p class="pdf-fallback">📥 <a href="pdfs/SW07_ImageQuality_Transformations.pdf">PDF herunterladen</a></p>
+  <iframe src="/Bachelor-ADLS-Summary/assets/pdfjs/web/viewer.html?file=/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW07_ImageQuality_Transformations.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <p class="pdf-fallback">📥 <a href="../pdfs/SW07_ImageQuality_Transformations.pdf">PDF herunterladen</a></p>
 </div>
 
 | Attribut | Beschreibung |
@@ -158,8 +158,8 @@ F(u,v) = ΣΣ f(x,y) · e^{−j2π(ux/M + vy/N)}
 ## 6. 2D-Faltung & räumliche Filter
 
 <div class="pdf-embed">
-  <iframe src="https://docs.google.com/viewer?url=https://javi36.github.io/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW09_Filtering_edge_detection.pdf&embedded=true" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
-  <p class="pdf-fallback">📥 <a href="pdfs/SW09_Filtering_edge_detection.pdf">PDF herunterladen</a></p>
+  <iframe src="/Bachelor-ADLS-Summary/assets/pdfjs/web/viewer.html?file=/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW09_Filtering_edge_detection.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <p class="pdf-fallback">📥 <a href="../pdfs/SW09_Filtering_edge_detection.pdf">PDF herunterladen</a></p>
 </div>
 
 ### 2D-Faltung
@@ -217,8 +217,8 @@ F(u,v) = ΣΣ f(x,y) · e^{−j2π(ux/M + vy/N)}
 ## 8. Feature-Erkennung & SIFT
 
 <div class="pdf-embed">
-  <iframe src="https://docs.google.com/viewer?url=https://javi36.github.io/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW10_FeatureDetection.pdf&embedded=true" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
-  <p class="pdf-fallback">📥 <a href="pdfs/SW10_FeatureDetection.pdf">PDF herunterladen</a></p>
+  <iframe src="/Bachelor-ADLS-Summary/assets/pdfjs/web/viewer.html?file=/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW10_FeatureDetection.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <p class="pdf-fallback">📥 <a href="../pdfs/SW10_FeatureDetection.pdf">PDF herunterladen</a></p>
 </div>
 
 ### Lokale Features
@@ -249,8 +249,8 @@ F(u,v) = ΣΣ f(x,y) · e^{−j2π(ux/M + vy/N)}
 ## 9. Morphologische Operationen
 
 <div class="pdf-embed">
-  <iframe src="https://docs.google.com/viewer?url=https://javi36.github.io/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW12_featureMatching_segmentation_maskOperations.pdf&embedded=true" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
-  <p class="pdf-fallback">📥 <a href="pdfs/SW12_featureMatching_segmentation_maskOperations.pdf">PDF herunterladen</a></p>
+  <iframe src="/Bachelor-ADLS-Summary/assets/pdfjs/web/viewer.html?file=/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW12_featureMatching_segmentation_maskOperations.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <p class="pdf-fallback">📥 <a href="../pdfs/SW12_featureMatching_segmentation_maskOperations.pdf">PDF herunterladen</a></p>
 </div>
 
 ### Grundoperationen (auf Binärbildern)
@@ -305,8 +305,8 @@ Für jeden Vordergrundpixel: Distanz zum nächsten Hintergrundpixel → nützlic
 ## 11. Dateiformate & JPEG-Kompression
 
 <div class="pdf-embed">
-  <iframe src="https://docs.google.com/viewer?url=https://javi36.github.io/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW13_imageFileFormats.pdf&embedded=true" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
-  <p class="pdf-fallback">📥 <a href="pdfs/SW13_imageFileFormats.pdf">PDF herunterladen</a></p>
+  <iframe src="/Bachelor-ADLS-Summary/assets/pdfjs/web/viewer.html?file=/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW13_imageFileFormats.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <p class="pdf-fallback">📥 <a href="../pdfs/SW13_imageFileFormats.pdf">PDF herunterladen</a></p>
 </div>
 
 ### Raster- vs. Vektorgrafiken
