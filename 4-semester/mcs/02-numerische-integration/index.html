@@ -1334,10 +1334,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#euler-methode" class="md-nav__link">
+  <a href="#1-euler-methode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Euler-Methode
+        1. Euler-Methode
       
     </span>
   </a>
@@ -1345,10 +1345,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#runge-kutta-2-ordnung-heun" class="md-nav__link">
+  <a href="#2-runge-kutta-2-ordnung-heun" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Runge-Kutta 2. Ordnung (Heun)
+        2. Runge-Kutta 2. Ordnung (Heun)
       
     </span>
   </a>
@@ -1356,10 +1356,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#runge-kutta-4-ordnung-rk4" class="md-nav__link">
+  <a href="#3-runge-kutta-4-ordnung-rk4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Runge-Kutta 4. Ordnung (RK4)
+        3. Runge-Kutta 4. Ordnung (RK4)
       
     </span>
   </a>
@@ -1367,10 +1367,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vergleich" class="md-nav__link">
+  <a href="#4-vergleich" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vergleich
+        4. Vergleich
       
     </span>
   </a>
@@ -2178,10 +2178,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#euler-methode" class="md-nav__link">
+  <a href="#1-euler-methode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Euler-Methode
+        1. Euler-Methode
       
     </span>
   </a>
@@ -2189,10 +2189,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#runge-kutta-2-ordnung-heun" class="md-nav__link">
+  <a href="#2-runge-kutta-2-ordnung-heun" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Runge-Kutta 2. Ordnung (Heun)
+        2. Runge-Kutta 2. Ordnung (Heun)
       
     </span>
   </a>
@@ -2200,10 +2200,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#runge-kutta-4-ordnung-rk4" class="md-nav__link">
+  <a href="#3-runge-kutta-4-ordnung-rk4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Runge-Kutta 4. Ordnung (RK4)
+        3. Runge-Kutta 4. Ordnung (RK4)
       
     </span>
   </a>
@@ -2211,10 +2211,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vergleich" class="md-nav__link">
+  <a href="#4-vergleich" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Vergleich
+        4. Vergleich
       
     </span>
   </a>
@@ -2305,23 +2305,23 @@
 
 
 <h1 id="2-numerische-integration-euler-rk2-rk4">2. Numerische Integration (Euler, RK2, RK4)<a class="headerlink" href="#2-numerische-integration-euler-rk2-rk4" title="Permanent link">&para;</a></h1>
-<h2 id="euler-methode">Euler-Methode<a class="headerlink" href="#euler-methode" title="Permanent link">&para;</a></h2>
+<h2 id="1-euler-methode">1. Euler-Methode<a class="headerlink" href="#1-euler-methode" title="Permanent link">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>y_{n+1} = y_n + h · f(t_n, y_n)
 </span></code></pre></div>
 <p>h = Schrittweite. Einfach, aber ungenau — instabil bei grossem h.</p>
-<h2 id="runge-kutta-2-ordnung-heun">Runge-Kutta 2. Ordnung (Heun)<a class="headerlink" href="#runge-kutta-2-ordnung-heun" title="Permanent link">&para;</a></h2>
+<h2 id="2-runge-kutta-2-ordnung-heun">2. Runge-Kutta 2. Ordnung (Heun)<a class="headerlink" href="#2-runge-kutta-2-ordnung-heun" title="Permanent link">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>k₁ = f(t_n, y_n)
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>k₂ = f(t_n + h, y_n + h·k₁)
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>y_{n+1} = y_n + h/2 · (k₁ + k₂)
 </span></code></pre></div>
-<h2 id="runge-kutta-4-ordnung-rk4">Runge-Kutta 4. Ordnung (RK4)<a class="headerlink" href="#runge-kutta-4-ordnung-rk4" title="Permanent link">&para;</a></h2>
+<h2 id="3-runge-kutta-4-ordnung-rk4">3. Runge-Kutta 4. Ordnung (RK4)<a class="headerlink" href="#3-runge-kutta-4-ordnung-rk4" title="Permanent link">&para;</a></h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>k₁ = f(t_n, y_n)
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>k₂ = f(t_n + h/2, y_n + h/2·k₁)
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>k₃ = f(t_n + h/2, y_n + h/2·k₂)
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>k₄ = f(t_n + h, y_n + h·k₃)
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>y_{n+1} = y_n + h/6 · (k₁ + 2k₂ + 2k₃ + k₄)
 </span></code></pre></div>
-<h2 id="vergleich">Vergleich<a class="headerlink" href="#vergleich" title="Permanent link">&para;</a></h2>
+<h2 id="4-vergleich">4. Vergleich<a class="headerlink" href="#4-vergleich" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>

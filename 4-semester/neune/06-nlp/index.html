@@ -696,10 +696,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nlp-aufgaben" class="md-nav__link">
+  <a href="#1-nlp-aufgaben" class="md-nav__link">
     <span class="md-ellipsis">
       
-        NLP-Aufgaben
+        1. NLP-Aufgaben
       
     </span>
   </a>
@@ -707,10 +707,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#text-preprocessing-pipeline" class="md-nav__link">
+  <a href="#2-text-preprocessing-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Text-Preprocessing Pipeline
+        2. Text-Preprocessing Pipeline
       
     </span>
   </a>
@@ -718,10 +718,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#python-text-preprocessing" class="md-nav__link">
+  <a href="#3-python-text-preprocessing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Python Text-Preprocessing
+        3. Python Text-Preprocessing
       
     </span>
   </a>
@@ -729,10 +729,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tensorflow-tfdata" class="md-nav__link">
+  <a href="#4-tensorflow-tfdata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        TensorFlow tf.data
+        4. TensorFlow tf.data
       
     </span>
   </a>
@@ -2178,10 +2178,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nlp-aufgaben" class="md-nav__link">
+  <a href="#1-nlp-aufgaben" class="md-nav__link">
     <span class="md-ellipsis">
       
-        NLP-Aufgaben
+        1. NLP-Aufgaben
       
     </span>
   </a>
@@ -2189,10 +2189,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#text-preprocessing-pipeline" class="md-nav__link">
+  <a href="#2-text-preprocessing-pipeline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Text-Preprocessing Pipeline
+        2. Text-Preprocessing Pipeline
       
     </span>
   </a>
@@ -2200,10 +2200,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#python-text-preprocessing" class="md-nav__link">
+  <a href="#3-python-text-preprocessing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Python Text-Preprocessing
+        3. Python Text-Preprocessing
       
     </span>
   </a>
@@ -2211,10 +2211,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tensorflow-tfdata" class="md-nav__link">
+  <a href="#4-tensorflow-tfdata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        TensorFlow tf.data
+        4. TensorFlow tf.data
       
     </span>
   </a>
@@ -2305,7 +2305,7 @@
 
 
 <h1 id="6-nlp-natural-language-processing">6. NLP — Natural Language Processing<a class="headerlink" href="#6-nlp-natural-language-processing" title="Permanent link">&para;</a></h1>
-<h2 id="nlp-aufgaben">NLP-Aufgaben<a class="headerlink" href="#nlp-aufgaben" title="Permanent link">&para;</a></h2>
+<h2 id="1-nlp-aufgaben">1. NLP-Aufgaben<a class="headerlink" href="#1-nlp-aufgaben" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -2348,14 +2348,14 @@
 </tr>
 </tbody>
 </table>
-<h2 id="text-preprocessing-pipeline">Text-Preprocessing Pipeline<a class="headerlink" href="#text-preprocessing-pipeline" title="Permanent link">&para;</a></h2>
+<h2 id="2-text-preprocessing-pipeline">2. Text-Preprocessing Pipeline<a class="headerlink" href="#2-text-preprocessing-pipeline" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Text laden</strong>: Rohdaten als Strings</li>
 <li><strong>Tokenisierung</strong>: Text → Liste von Tokens (Wörter/Zeichen)</li>
 <li><strong>Vokabular aufbauen</strong>: Tokens → numerische Indizes</li>
 <li><strong>Vektorisierung</strong>: Sequenzen numerischer Indizes → Modell-Input</li>
 </ol>
-<h2 id="python-text-preprocessing">Python Text-Preprocessing<a class="headerlink" href="#python-text-preprocessing" title="Permanent link">&para;</a></h2>
+<h2 id="3-python-text-preprocessing">3. Python Text-Preprocessing<a class="headerlink" href="#3-python-text-preprocessing" title="Permanent link">&para;</a></h2>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Bereinigung: Grossbuchstaben-Header entfernen</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">sub_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[A-Z]{2,}&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">]</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Kleinbuchstaben + Satzzeichen entfernen</span>
@@ -2365,7 +2365,7 @@
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="n">sub_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">sub_lines</span> <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()]</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">main_text_lines</span> <span class="o">=</span> <span class="n">sub_lines</span><span class="p">[</span><span class="mi">16</span><span class="p">:</span><span class="o">-</span><span class="mi">287</span><span class="p">]</span>  <span class="c1"># Metadaten abschneiden</span>
 </span></code></pre></div>
-<h2 id="tensorflow-tfdata">TensorFlow tf.data<a class="headerlink" href="#tensorflow-tfdata" title="Permanent link">&para;</a></h2>
+<h2 id="4-tensorflow-tfdata">4. TensorFlow tf.data<a class="headerlink" href="#4-tensorflow-tfdata" title="Permanent link">&para;</a></h2>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">tf_dataset</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Dataset</span><span class="o">.</span><span class="n">from_tensor_slices</span><span class="p">(</span><span class="n">main_text_lines</span><span class="p">)</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">tf_dataset</span><span class="o">.</span><span class="n">take</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">numpy</span><span class="p">())</span>
