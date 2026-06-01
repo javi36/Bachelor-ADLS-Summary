@@ -3,7 +3,7 @@
 ## 1. Signaltypen & Eigenschaften
 
 <div class="pdf-embed">
-  <iframe src="pdfs/SW01_SignalsAndSampling.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <iframe src="https://docs.google.com/viewer?url=https://javi36.github.io/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW01_SignalsAndSampling.pdf&embedded=true" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
   <p class="pdf-fallback">📥 <a href="pdfs/SW01_SignalsAndSampling.pdf">PDF herunterladen</a></p>
 </div>
 
@@ -83,7 +83,7 @@ f_s ≥ 2 · f_max
 ## 3. Fourier-Reihen
 
 <div class="pdf-embed">
-  <iframe src="pdfs/SW02_FourierSeries.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <iframe src="https://docs.google.com/viewer?url=https://javi36.github.io/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW02_FourierSeries.pdf&embedded=true" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
   <p class="pdf-fallback">📥 <a href="pdfs/SW02_FourierSeries.pdf">PDF herunterladen</a></p>
 </div>
 
@@ -118,7 +118,7 @@ Jedes periodische Signal lässt sich als Summe von Sinusoiden darstellen (konstr
 ## 4. Fourier-Transformation
 
 <div class="pdf-embed">
-  <iframe src="pdfs/SW03_FourierTransformtion.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <iframe src="https://docs.google.com/viewer?url=https://javi36.github.io/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW03_FourierTransformtion.pdf&embedded=true" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
   <p class="pdf-fallback">📥 <a href="pdfs/SW03_FourierTransformtion.pdf">PDF herunterladen</a></p>
 </div>
 
@@ -197,7 +197,7 @@ scipy.fft.fftfreq(N, d=1/f_s)
 ## 6. Faltung & Korrelation
 
 <div class="pdf-embed">
-  <iframe src="pdfs/SW04_05_Filtering.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <iframe src="https://docs.google.com/viewer?url=https://javi36.github.io/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW04_05_Filtering.pdf&embedded=true" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
   <p class="pdf-fallback">📥 <a href="pdfs/SW04_05_Filtering.pdf">PDF herunterladen</a></p>
 </div>
 
