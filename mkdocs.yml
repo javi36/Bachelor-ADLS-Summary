@@ -1,0 +1,115 @@
+site_name: ADLS — Prüfungszusammenfassungen
+site_description: Prüfungszusammenfassungen ZHAW Applied Digital Life Science
+site_author: Javier Martinez Alvarez
+
+theme:
+  name: material
+  language: de
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Dunkelmodus
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Hellmodus
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search:
+      lang: de
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Startseite: index.md
+  - 4. Semester:
+    - Übersicht: 4-semester/index.md
+    - NeuNe — Neural Networks:
+      - Übersicht: 4-semester/neune/index.md
+      - Perceptron: 4-semester/neune/01-perceptron.md
+      - MLP & Backpropagation: 4-semester/neune/02-mlp.md
+      - Training Pipeline: 4-semester/neune/03-training.md
+      - CNN: 4-semester/neune/04-cnn.md
+      - RNN: 4-semester/neune/05-rnn.md
+      - NLP: 4-semester/neune/06-nlp.md
+      - Prüfungstipps: 4-semester/neune/pruefungstipps.md
+    - OrgChem — Organische Chemie:
+      - Übersicht: 4-semester/orgchem/index.md
+      - C-Bindungen & Hybridisierung: 4-semester/orgchem/01-bindungen.md
+      - IUPAC-Nomenklatur: 4-semester/orgchem/02-nomenklatur.md
+      - Isomerie: 4-semester/orgchem/03-isomerie.md
+      - Funktionelle Gruppen: 4-semester/orgchem/04-funktionelle-gruppen.md
+      - Reaktionen & Mechanismen: 4-semester/orgchem/05-reaktionen.md
+      - Chemisches Gleichgewicht: 4-semester/orgchem/06-gleichgewicht.md
+      - Prüfungstipps: 4-semester/orgchem/pruefungstipps.md
+    - ISP — Image & Signal Processing:
+      - Übersicht: 4-semester/isp/index.md
+      - Signalverarbeitung: 4-semester/isp/01-signalverarbeitung.md
+      - Bildverarbeitung: 4-semester/isp/02-bildverarbeitung.md
+      - Prüfungstipps: 4-semester/isp/pruefungstipps.md
+    - MCS — Modellierung komplexer Systeme:
+      - Übersicht: 4-semester/mcs/index.md
+      - Systemdynamik: 4-semester/mcs/01-systemdynamik.md
+      - Numerische Integration: 4-semester/mcs/02-numerische-integration.md
+      - Logistisches Wachstum: 4-semester/mcs/03-logistisches-wachstum.md
+      - Ernte-Modell & Bifurkation: 4-semester/mcs/04-ernte-modell.md
+      - 2-Populationen-Modell: 4-semester/mcs/05-populationen.md
+      - Chaos & Nichtlineare Systeme: 4-semester/mcs/06-chaos.md
+      - Prüfungstipps: 4-semester/mcs/pruefungstipps.md
+    - DaS — Data and Society:
+      - Übersicht: 4-semester/das/index.md
+      - Die Macht der Daten: 4-semester/das/01-macht-der-daten.md
+      - Narrow Corridor: 4-semester/das/02-narrow-corridor.md
+      - Entscheidungsproblem & Turing: 4-semester/das/03-turing.md
+      - Algorithmen & Explore/Exploit: 4-semester/das/04-algorithmen.md
+      - Geschichte der KI: 4-semester/das/05-ki-geschichte.md
+      - Techno-Optimismus: 4-semester/das/06-techno-optimismus.md
+      - Kognitive Biases: 4-semester/das/07-kognitive-biases.md
+      - Prüfungstipps: 4-semester/das/pruefungstipps.md
+    - DSV — Digital Storytelling & Visualisation:
+      - Übersicht: 4-semester/dsv/index.md
+      - Data Storytelling Grundlagen: 4-semester/dsv/01-storytelling.md
+      - Author-Driven vs. Reader-Driven: 4-semester/dsv/02-author-reader.md
+      - Datenskalen (NOIR): 4-semester/dsv/03-datenskalen.md
+      - Visuelle Variablen (Bertin): 4-semester/dsv/04-visuelle-variablen.md
+      - Data-Ink Ratio & Chartjunk: 4-semester/dsv/05-data-ink.md
+      - Visualisierungs-Verzeichnis: 4-semester/dsv/06-visualisierungen.md
+      - Prüfungstipps: 4-semester/dsv/pruefungstipps.md
