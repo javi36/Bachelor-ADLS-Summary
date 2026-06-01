@@ -40,6 +40,10 @@ extra_css:
 plugins:
   - search:
       lang: de
+  - mkdocs-jupyter:
+      execute: false
+      include_source: true
+      ignore_h1_titles: true
 
 markdown_extensions:
   - tables
@@ -91,6 +95,27 @@ nav:
       - 1. Signalverarbeitung: 4-semester/isp/01-signalverarbeitung.md
       - 2. Bildverarbeitung: 4-semester/isp/02-bildverarbeitung.md
       - Prüfungstipps: 4-semester/isp/pruefungstipps.md
+      - Notebooks — Signalverarbeitung:
+        - Setup & Einführung: 4-semester/isp/ipynb/SW00-setup.ipynb
+        - Signal Gallery: 4-semester/isp/ipynb/SW00-signal-gallery.ipynb
+        - SW01 — Signale: 4-semester/isp/ipynb/SW01-signals.ipynb
+        - SW02 — Fourier-Reihen: 4-semester/isp/ipynb/SW02-fourier-series.ipynb
+        - SW02 — Fourier-Spektren: 4-semester/isp/ipynb/SW02-fourier-spectra.ipynb
+        - SW02 — Sounds: 4-semester/isp/ipynb/SW02-sounds.ipynb
+        - SW03 — Fourier-Transformation: 4-semester/isp/ipynb/SW03-fourier.ipynb
+        - SW04 — Faltung: 4-semester/isp/ipynb/SW04-convolution.ipynb
+      - Notebooks — Bildverarbeitung:
+        - SW06 — Grundlagen: 4-semester/isp/ipynb/SW06-image-processing-basics.ipynb
+        - SW07 — Affine Transf. (OpenCV): 4-semester/isp/ipynb/SW07-affine-transformations-opencv.ipynb
+        - SW07 — Affine Transf. (Pillow): 4-semester/isp/ipynb/SW07-affine-transformations-pillow.ipynb
+        - SW07 — Fourier 2D: 4-semester/isp/ipynb/SW07-fourier-2d.ipynb
+        - SW07 — Interpolation: 4-semester/isp/ipynb/SW07-interpolation.ipynb
+        - SW09 — Filterung 2D: 4-semester/isp/ipynb/SW09-filtering-2d.ipynb
+        - SW10 — Live Processing: 4-semester/isp/ipynb/SW10-live-processing.ipynb
+        - SW12 — Morphologie: 4-semester/isp/ipynb/SW12-morpho.ipynb
+        - SW12 — Maskenoperationen: 4-semester/isp/ipynb/SW12-mask-operations.ipynb
+        - SW13 — QR-Code App: 4-semester/isp/ipynb/SW13-application-qr-code.ipynb
+        - SW13 — Puzzle App: 4-semester/isp/ipynb/SW13-application-solve-puzzle.ipynb
     - Modellierung komplexer Systeme:
       - Übersicht: 4-semester/mcs/index.md
       - 1. Systemdynamik: 4-semester/mcs/01-systemdynamik.md
