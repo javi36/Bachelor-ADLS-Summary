@@ -3,7 +3,7 @@
 ## 1. Signaltypen & Eigenschaften
 
 <div class="pdf-embed">
-  <iframe src="/Bachelor-ADLS-Summary/assets/pdfjs/web/viewer.html?file=/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW01_SignalsAndSampling.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <iframe src="https://docs.google.com/viewer?url=https%3A%2F%2Fjavi36.github.io%2FBachelor-ADLS-Summary%2F4-semester%2Fisp%2Fpdfs%2FSW01_SignalsAndSampling.pdf&embedded=true" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
   <p class="pdf-fallback">📥 <a href="../pdfs/SW01_SignalsAndSampling.pdf">PDF herunterladen</a></p>
 </div>
 
@@ -83,7 +83,7 @@ f_s ≥ 2 · f_max
 ## 3. Fourier-Reihen
 
 <div class="pdf-embed">
-  <iframe src="/Bachelor-ADLS-Summary/assets/pdfjs/web/viewer.html?file=/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW02_FourierSeries.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <iframe src="https://docs.google.com/viewer?url=https%3A%2F%2Fjavi36.github.io%2FBachelor-ADLS-Summary%2F4-semester%2Fisp%2Fpdfs%2FSW02_FourierSeries.pdf&embedded=true" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
   <p class="pdf-fallback">📥 <a href="../pdfs/SW02_FourierSeries.pdf">PDF herunterladen</a></p>
 </div>
 
@@ -117,9 +117,9 @@ Jedes periodische Signal lässt sich als Summe von Sinusoiden darstellen (konstr
 
 ## 4. Fourier-Transformation
 
-<div class="pdf-embed">
-  <iframe src="/Bachelor-ADLS-Summary/assets/pdfjs/web/viewer.html?file=/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW03_FourierTransformtion.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
-  <p class="pdf-fallback">📥 <a href="../pdfs/SW03_FourierTransformtion.pdf">PDF herunterladen</a></p>
+<div class="pdf-embed" style="padding: 1.5rem; text-align: center;">
+  <p style="margin: 0 0 0.8rem; color: var(--md-default-fg-color--light); font-size: 0.85rem;">PDF zu gross für Online-Anzeige (25 MB)</p>
+  <p class="pdf-fallback" style="border-top: none;">📥 <a href="../pdfs/SW03_FourierTransformtion.pdf">SW03_FourierTransformation.pdf herunterladen</a></p>
 </div>
 
 ### Kontinuierliche FT (CTFT)
@@ -197,7 +197,7 @@ scipy.fft.fftfreq(N, d=1/f_s)
 ## 6. Faltung & Korrelation
 
 <div class="pdf-embed">
-  <iframe src="/Bachelor-ADLS-Summary/assets/pdfjs/web/viewer.html?file=/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW04_05_Filtering.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <iframe src="https://docs.google.com/viewer?url=https%3A%2F%2Fjavi36.github.io%2FBachelor-ADLS-Summary%2F4-semester%2Fisp%2Fpdfs%2FSW04_05_Filtering.pdf&embedded=true" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
   <p class="pdf-fallback">📥 <a href="../pdfs/SW04_05_Filtering.pdf">PDF herunterladen</a></p>
 </div>
 

@@ -40,7 +40,7 @@
 
 ## Abschluss-Zusammenfassung (SW14)
 
-<div class="pdf-embed">
-  <iframe src="/Bachelor-ADLS-Summary/assets/pdfjs/web/viewer.html?file=/Bachelor-ADLS-Summary/4-semester/isp/pdfs/SW14_Finale.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
-  <p class="pdf-fallback">📥 <a href="../pdfs/SW14_Finale.pdf">PDF herunterladen</a></p>
+<div class="pdf-embed" style="padding: 1.5rem; text-align: center;">
+  <p style="margin: 0 0 0.8rem; color: var(--md-default-fg-color--light); font-size: 0.85rem;">PDF zu gross für Online-Anzeige (48 MB)</p>
+  <p class="pdf-fallback" style="border-top: none;">📥 <a href="../pdfs/SW14_Finale.pdf">SW14_Finale.pdf herunterladen</a></p>
 </div>
