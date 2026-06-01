@@ -8,6 +8,35 @@
   letter-spacing: -0.02em;
 }
 
+/* ── Automatische Nummerierung der Unterkapitel ─────────── */
+.md-typeset {
+  counter-reset: h2counter;
+}
+
+.md-typeset h2 {
+  counter-increment: h2counter;
+  counter-reset: h3counter;
+}
+
+.md-typeset h2::before {
+  content: counter(h2counter) ". ";
+  color: var(--md-primary-fg-color);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.md-typeset h3 {
+  counter-increment: h3counter;
+}
+
+.md-typeset h3::before {
+  content: counter(h2counter) "." counter(h3counter) "  ";
+  color: var(--md-default-fg-color--light);
+  font-weight: 600;
+  font-size: 0.85em;
+  font-variant-numeric: tabular-nums;
+}
+
 /* ── H2 Abschnittsüberschriften ─────────────────────────── */
 .md-typeset h2 {
   border-bottom: 2px solid var(--md-primary-fg-color);
