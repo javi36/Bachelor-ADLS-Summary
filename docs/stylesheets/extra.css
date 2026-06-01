@@ -148,10 +148,21 @@
 }
 
 .md-typeset .pdf-fallback {
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 0.8rem;
   background: var(--md-code-bg-color);
   margin: 0;
   text-align: center;
   color: var(--md-default-fg-color--light);
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .pdf-fallback a {
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.md-typeset .pdf-fallback a:hover {
+  text-decoration: underline;
 }

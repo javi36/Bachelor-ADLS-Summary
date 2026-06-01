@@ -3,8 +3,8 @@
 ## 1. Signaltypen & Eigenschaften
 
 <div class="pdf-embed">
-  <embed src="pdfs/SW01_SignalsAndSampling.pdf" type="application/pdf" width="100%" height="720px">
-  <p class="pdf-fallback">PDF nicht ladbar — <a href="pdfs/SW01_SignalsAndSampling.pdf">herunterladen</a></p>
+  <iframe src="pdfs/SW01_SignalsAndSampling.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <p class="pdf-fallback">📥 <a href="pdfs/SW01_SignalsAndSampling.pdf">PDF herunterladen</a></p>
 </div>
 
 ### Signaltypen
@@ -83,8 +83,8 @@ f_s ≥ 2 · f_max
 ## 3. Fourier-Reihen
 
 <div class="pdf-embed">
-  <embed src="pdfs/SW02_FourierSeries.pdf" type="application/pdf" width="100%" height="720px">
-  <p class="pdf-fallback">PDF nicht ladbar — <a href="pdfs/SW02_FourierSeries.pdf">herunterladen</a></p>
+  <iframe src="pdfs/SW02_FourierSeries.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <p class="pdf-fallback">📥 <a href="pdfs/SW02_FourierSeries.pdf">PDF herunterladen</a></p>
 </div>
 
 ### Superpositionsprinzip
@@ -118,8 +118,8 @@ Jedes periodische Signal lässt sich als Summe von Sinusoiden darstellen (konstr
 ## 4. Fourier-Transformation
 
 <div class="pdf-embed">
-  <embed src="pdfs/SW03_FourierTransformtion.pdf" type="application/pdf" width="100%" height="720px">
-  <p class="pdf-fallback">PDF nicht ladbar — <a href="pdfs/SW03_FourierTransformtion.pdf">herunterladen</a></p>
+  <iframe src="pdfs/SW03_FourierTransformtion.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <p class="pdf-fallback">📥 <a href="pdfs/SW03_FourierTransformtion.pdf">PDF herunterladen</a></p>
 </div>
 
 ### Kontinuierliche FT (CTFT)
@@ -197,8 +197,8 @@ scipy.fft.fftfreq(N, d=1/f_s)
 ## 6. Faltung & Korrelation
 
 <div class="pdf-embed">
-  <embed src="pdfs/SW04_05_Filtering.pdf" type="application/pdf" width="100%" height="720px">
-  <p class="pdf-fallback">PDF nicht ladbar — <a href="pdfs/SW04_05_Filtering.pdf">herunterladen</a></p>
+  <iframe src="pdfs/SW04_05_Filtering.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <p class="pdf-fallback">📥 <a href="pdfs/SW04_05_Filtering.pdf">PDF herunterladen</a></p>
 </div>
 
 ### Faltung (Convolution)

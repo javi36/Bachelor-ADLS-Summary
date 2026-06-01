@@ -41,6 +41,6 @@
 ## Abschluss-Zusammenfassung (SW14)
 
 <div class="pdf-embed">
-  <embed src="pdfs/SW14_Finale.pdf" type="application/pdf" width="100%" height="720px">
-  <p class="pdf-fallback">PDF nicht ladbar — <a href="pdfs/SW14_Finale.pdf">herunterladen</a></p>
+  <iframe src="pdfs/SW14_Finale.pdf" width="100%" height="720px" style="border:none;" loading="lazy"></iframe>
+  <p class="pdf-fallback">📥 <a href="pdfs/SW14_Finale.pdf">PDF herunterladen</a></p>
 </div>
