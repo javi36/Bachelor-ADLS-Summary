@@ -132,3 +132,26 @@
   border-radius: 0.4rem;
   box-shadow: 0 1px 3px rgba(0,0,0,.08);
 }
+
+/* ── Eingebettete PDFs ───────────────────────────────────── */
+.md-typeset .pdf-embed {
+  margin: 1.2rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .pdf-embed embed {
+  display: block;
+  min-height: 500px;
+}
+
+.md-typeset .pdf-fallback {
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
+  background: var(--md-code-bg-color);
+  margin: 0;
+  text-align: center;
+  color: var(--md-default-fg-color--light);
+}
