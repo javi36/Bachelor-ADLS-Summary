@@ -1,0 +1,3662 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Prüfungszusammenfassungen ZHAW Applied Digital Life Science">
+      
+      
+        <meta name="author" content="Javier Martinez Alvarez">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../02-bildverarbeitung/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Signalverarbeitung - ADLS — Prüfungszusammenfassungen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#teil-i-signalverarbeitung" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../../.." title="ADLS — Prüfungszusammenfassungen" class="md-header__button md-logo" aria-label="ADLS — Prüfungszusammenfassungen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ADLS — Prüfungszusammenfassungen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Signalverarbeitung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dunkelmodus"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dunkelmodus" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Hellmodus"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Hellmodus" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Teilen" aria-label="Teilen" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Startseite
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  4. Semester
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ADLS — Prüfungszusammenfassungen" class="md-nav__button md-logo" aria-label="ADLS — Prüfungszusammenfassungen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ADLS — Prüfungszusammenfassungen
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Semester
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. Semester
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../neune/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NeuNe — Neural Networks
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NeuNe — Neural Networks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neune/01-perceptron/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Perceptron
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neune/02-mlp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLP & Backpropagation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neune/03-training/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Training Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neune/04-cnn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CNN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neune/05-rnn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RNN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neune/06-nlp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NLP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neune/pruefungstipps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prüfungstipps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../orgchem/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OrgChem — Organische Chemie
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OrgChem — Organische Chemie
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgchem/01-bindungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C-Bindungen & Hybridisierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgchem/02-nomenklatur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IUPAC-Nomenklatur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgchem/03-isomerie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Isomerie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgchem/04-funktionelle-gruppen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funktionelle Gruppen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgchem/05-reaktionen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reaktionen & Mechanismen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgchem/06-gleichgewicht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chemisches Gleichgewicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgchem/pruefungstipps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prüfungstipps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP — Image & Signal Processing
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ISP — Image & Signal Processing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signalverarbeitung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signalverarbeitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#signaltypen-eigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signaltypen &amp; Eigenschaften
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signaltypen &amp; Eigenschaften">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signaltypen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signaltypen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signaleigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signaleigenschaften
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sinusoide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sinusoide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#einheitssignale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Einheitssignale
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abtastung-interpolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abtastung &amp; Interpolation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Abtastung &amp; Interpolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nyquist-shannon-abtasttheorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nyquist-Shannon-Abtasttheorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diskretisierung-vs-quantisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diskretisierung vs. Quantisierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fourier-reihen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fourier-Reihen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fourier-Reihen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#superpositionsprinzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Superpositionsprinzip
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fourier-reihen-darstellungen-alle-aquivalent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fourier-Reihen-Darstellungen (alle äquivalent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effekt-von-signalsymmetrien-auf-koeffizienten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effekt von Signalsymmetrien auf Koeffizienten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-phasenspektrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Magnitude- &amp; Phasenspektrum
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fourier-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fourier-Transformation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fourier-Transformation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kontinuierliche-ft-ctft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kontinuierliche FT (CTFT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-eigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Eigenschaften
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-transformationspaare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Transformationspaare
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fourier-landschaft-uberblick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fourier-Landschaft (Überblick)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dft-fft-stft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DFT, FFT &amp; STFT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DFT, FFT &amp; STFT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diskrete-fourier-transformation-dft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diskrete Fourier-Transformation (DFT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fast-fourier-transform-fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fast Fourier Transform (FFT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-time-fourier-transform-stft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Short-Time Fourier Transform (STFT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faltung-korrelation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Faltung &amp; Korrelation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Faltung &amp; Korrelation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#faltung-convolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Faltung (Convolution)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kreuzkorrelation-cross-correlation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kreuzkorrelation (Cross-Correlation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autokorrelation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autokorrelation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filterung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filterung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filterung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spektrale-filtertypen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spektrale Filtertypen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fensterfunktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fensterfunktionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fir-vs-iir-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIR vs. IIR Filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sinc-rauschen-dezibel-kompression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sinc, Rauschen, Dezibel, Kompression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="sinc, Rauschen, Dezibel, Kompression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sinc-funktion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sinc-Funktion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rauschen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rauschen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dezibel-skala" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dezibel-Skala
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kompression-grundlagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kompression (Grundlagen)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-bildverarbeitung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bildverarbeitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pruefungstipps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prüfungstipps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mcs/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCS — Modellierung komplexer Systeme
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MCS — Modellierung komplexer Systeme
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/01-systemdynamik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systemdynamik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/02-numerische-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numerische Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/03-logistisches-wachstum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logistisches Wachstum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/04-ernte-modell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ernte-Modell & Bifurkation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/05-populationen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2-Populationen-Modell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/06-chaos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chaos & Nichtlineare Systeme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/pruefungstipps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prüfungstipps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../das/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaS — Data and Society
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaS — Data and Society
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/01-macht-der-daten/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Die Macht der Daten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/02-narrow-corridor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Narrow Corridor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/03-turing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entscheidungsproblem & Turing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/04-algorithmen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithmen & Explore/Exploit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/05-ki-geschichte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geschichte der KI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/06-techno-optimismus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Techno-Optimismus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/07-kognitive-biases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kognitive Biases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/pruefungstipps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prüfungstipps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dsv/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DSV — Digital Storytelling & Visualisation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DSV — Digital Storytelling & Visualisation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dsv/01-storytelling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Storytelling Grundlagen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dsv/02-author-reader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Author-Driven vs. Reader-Driven
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dsv/03-datenskalen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datenskalen (NOIR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dsv/04-visuelle-variablen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visuelle Variablen (Bertin)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dsv/05-data-ink/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data-Ink Ratio & Chartjunk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dsv/06-visualisierungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualisierungs-Verzeichnis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dsv/pruefungstipps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prüfungstipps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#signaltypen-eigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signaltypen &amp; Eigenschaften
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Signaltypen &amp; Eigenschaften">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signaltypen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signaltypen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signaleigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Signaleigenschaften
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sinusoide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sinusoide
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#einheitssignale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Einheitssignale
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abtastung-interpolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abtastung &amp; Interpolation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Abtastung &amp; Interpolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nyquist-shannon-abtasttheorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nyquist-Shannon-Abtasttheorem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diskretisierung-vs-quantisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diskretisierung vs. Quantisierung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fourier-reihen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fourier-Reihen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fourier-Reihen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#superpositionsprinzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Superpositionsprinzip
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fourier-reihen-darstellungen-alle-aquivalent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fourier-Reihen-Darstellungen (alle äquivalent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effekt-von-signalsymmetrien-auf-koeffizienten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effekt von Signalsymmetrien auf Koeffizienten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#magnitude-phasenspektrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Magnitude- &amp; Phasenspektrum
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fourier-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fourier-Transformation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fourier-Transformation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kontinuierliche-ft-ctft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kontinuierliche FT (CTFT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-eigenschaften" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Eigenschaften
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-transformationspaare" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Transformationspaare
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fourier-landschaft-uberblick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fourier-Landschaft (Überblick)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dft-fft-stft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DFT, FFT &amp; STFT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DFT, FFT &amp; STFT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diskrete-fourier-transformation-dft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diskrete Fourier-Transformation (DFT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fast-fourier-transform-fft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fast Fourier Transform (FFT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#short-time-fourier-transform-stft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Short-Time Fourier Transform (STFT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faltung-korrelation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Faltung &amp; Korrelation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Faltung &amp; Korrelation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#faltung-convolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Faltung (Convolution)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kreuzkorrelation-cross-correlation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kreuzkorrelation (Cross-Correlation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autokorrelation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autokorrelation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filterung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filterung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filterung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spektrale-filtertypen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spektrale Filtertypen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fensterfunktionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fensterfunktionen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fir-vs-iir-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIR vs. IIR Filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sinc-rauschen-dezibel-kompression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sinc, Rauschen, Dezibel, Kompression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="sinc, Rauschen, Dezibel, Kompression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sinc-funktion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sinc-Funktion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rauschen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rauschen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dezibel-skala" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dezibel-Skala
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kompression-grundlagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kompression (Grundlagen)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="teil-i-signalverarbeitung">Teil I: Signalverarbeitung<a class="headerlink" href="#teil-i-signalverarbeitung" title="Permanent link">&para;</a></h1>
+<h2 id="signaltypen-eigenschaften">Signaltypen &amp; Eigenschaften<a class="headerlink" href="#signaltypen-eigenschaften" title="Permanent link">&para;</a></h2>
+<h3 id="signaltypen">Signaltypen<a class="headerlink" href="#signaltypen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Zeit</th>
+<th>Amplitude</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analog (kontinuierlich)</td>
+<td>Kontinuierlich</td>
+<td>Kontinuierlich</td>
+<td>Sprachsignal, Temperatur</td>
+</tr>
+<tr>
+<td>Zeitdiskret</td>
+<td>Diskret</td>
+<td>Kontinuierlich</td>
+<td>Abgetastetes Signal</td>
+</tr>
+<tr>
+<td>Digital</td>
+<td>Diskret</td>
+<td>Diskret (quantisiert)</td>
+<td>Computer-Audio, Bilddatei</td>
+</tr>
+</tbody>
+</table>
+<h3 id="signaleigenschaften">Signaleigenschaften<a class="headerlink" href="#signaleigenschaften" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Periodizität:</strong> x(t) = x(t + T) – Signal wiederholt sich mit Periode T</li>
+<li><strong>Symmetrie gerade:</strong> x(−t) = x(t) → nur Kosinus-Terme in Fourier-Reihe</li>
+<li><strong>Symmetrie ungerade:</strong> x(−t) = −x(t) → nur Sinus-Terme in Fourier-Reihe</li>
+<li><strong>Asymptotisches Verhalten:</strong> Konvergiert das Signal gegen einen Grenzwert?</li>
+<li><strong>Mehrkanalig:</strong> z. B. Stereo-Audio (2 Kanäle), RGB-Bild (3 Kanäle)</li>
+</ul>
+<h3 id="sinusoide">Sinusoide<a class="headerlink" href="#sinusoide" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>x(t) = A · cos(2πft + φ) = A · cos(ωt + φ)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ω = 2πf,   T = 1/f,   A = Amplitude,   φ = Phase
+</span></code></pre></div>
+<ul>
+<li>cos(t) = sin(t + π/2) – Sinus und Kosinus sind phasenverschobene Versionen desselben Signals</li>
+<li><strong>Schwebung (Beat):</strong> Überlagerung zweier nahe Frequenzen f₁, f₂ → Amplitudenmodulation mit Frequenz |f₁ − f₂|</li>
+</ul>
+<h3 id="einheitssignale">Einheitssignale<a class="headerlink" href="#einheitssignale" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Definition</th>
+<th>Fourier-Transform</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit Step u(t)</td>
+<td>0 für t&lt;0 ; 1 für t≥0</td>
+<td>1/(j2πf) + ½·δ(f)</td>
+</tr>
+<tr>
+<td>Impuls δ(t)</td>
+<td>∞ bei t=0, ∫δ dt=1</td>
+<td>1 (alle Frequenzen gleich)</td>
+</tr>
+<tr>
+<td>rect(t)</td>
+<td>1 für</td>
+<td>t</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="abtastung-interpolation">Abtastung &amp; Interpolation<a class="headerlink" href="#abtastung-interpolation" title="Permanent link">&para;</a></h2>
+<h3 id="nyquist-shannon-abtasttheorem">Nyquist-Shannon-Abtasttheorem<a class="headerlink" href="#nyquist-shannon-abtasttheorem" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>f_s ≥ 2 · f_max
+</span></code></pre></div>
+<ul>
+<li>f_s = Abtastfrequenz (Samples/s), f_max = höchste im Signal vorhandene Frequenz</li>
+<li>Abtastperiode: T_s = 1 / f_s</li>
+<li><strong>Überabtastung (Oversampling):</strong> f_s &gt;&gt; 2·f_max → sicherer, aber mehr Daten</li>
+<li><strong>Unterabtastung (Undersampling):</strong> f_s &lt; 2·f_max → Aliasing entsteht</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Aliasing</p>
+<p>Hohe Frequenzen falten sich auf niedrige zurück → Anti-Aliasing-Tiefpassfilter <em>vor</em> dem Abtasten anwenden!</p>
+</div>
+<h3 id="diskretisierung-vs-quantisierung">Diskretisierung vs. Quantisierung<a class="headerlink" href="#diskretisierung-vs-quantisierung" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Begriff</th>
+<th>Was wird gemacht?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diskretisierung</td>
+<td>Zeitachse wird diskret: Abtasten im Zeitbereich</td>
+</tr>
+<tr>
+<td>Quantisierung</td>
+<td>Amplitudenachse wird diskret: Runden auf endliche Bit-Stufen</td>
+</tr>
+</tbody>
+</table>
+<h3 id="interpolation">Interpolation<a class="headerlink" href="#interpolation" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Eigenschaften</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nearest-Neighbor</td>
+<td>Nächster bekannter Wert; schnell, stufig</td>
+</tr>
+<tr>
+<td>Linear (1. Ordnung)</td>
+<td>Lineare Verbindung; glatt, einfach</td>
+</tr>
+<tr>
+<td>Kubisch / Spline</td>
+<td>Glatter Übergang; bessere Qualität</td>
+</tr>
+<tr>
+<td>Sinc (ideal)</td>
+<td>Theoretisch perfekt; praktisch nicht realisierbar</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Python</p>
+<p><code>scipy.interpolate.interp1d()</code>, <code>pd.Series.resample()</code></p>
+</div>
+<hr />
+<h2 id="fourier-reihen">Fourier-Reihen<a class="headerlink" href="#fourier-reihen" title="Permanent link">&para;</a></h2>
+<h3 id="superpositionsprinzip">Superpositionsprinzip<a class="headerlink" href="#superpositionsprinzip" title="Permanent link">&para;</a></h3>
+<p>Jedes periodische Signal lässt sich als Summe von Sinusoiden darstellen (konstruktive / destruktive Interferenz).</p>
+<h3 id="fourier-reihen-darstellungen-alle-aquivalent">Fourier-Reihen-Darstellungen (alle äquivalent)<a class="headerlink" href="#fourier-reihen-darstellungen-alle-aquivalent" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Form</th>
+<th>Formel</th>
+<th>Koeffizienten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exponential</td>
+<td>x(t) = Σ c_k · e^{j2πkt/T}</td>
+<td>c_k = (1/T)∫ x(t)·e^{−j2πkt/T} dt</td>
+</tr>
+<tr>
+<td>Sinus-Kosinus</td>
+<td>x(t) = a₀ + Σ [aₖ cos(2πkt/T) + bₖ sin(2πkt/T)]</td>
+<td>a_k, b_k aus Integral</td>
+</tr>
+<tr>
+<td>Amplituden-Phase</td>
+<td>x(t) = A₀ + Σ Aₖ · cos(2πkt/T + φₖ)</td>
+<td>Aₖ = 2|c_k|, φₖ = ∠c_k</td>
+</tr>
+</tbody>
+</table>
+<h3 id="effekt-von-signalsymmetrien-auf-koeffizienten">Effekt von Signalsymmetrien auf Koeffizienten<a class="headerlink" href="#effekt-von-signalsymmetrien-auf-koeffizienten" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Symmetrie</th>
+<th>Effekt auf Koeffizienten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gerade: x(−t)=x(t)</td>
+<td>Nur reelle Koeffizienten (nur Kosinus-Terme)</td>
+</tr>
+<tr>
+<td>Ungerade: x(−t)=−x(t)</td>
+<td>Nur imaginäre Koeffizienten (nur Sinus-Terme)</td>
+</tr>
+<tr>
+<td>Real-wertig</td>
+<td>Konjugiert-symmetrisch: c_k = c*_{−k}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="magnitude-phasenspektrum">Magnitude- &amp; Phasenspektrum<a class="headerlink" href="#magnitude-phasenspektrum" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Amplitudenspektrum:</strong> |c_k| als Funktion der Frequenz k/T</li>
+<li><strong>Phasenspektrum:</strong> ∠c_k als Funktion der Frequenz</li>
+<li>DC-Komponente = c₀ = Mittelwert des Signals</li>
+</ul>
+<hr />
+<h2 id="fourier-transformation">Fourier-Transformation<a class="headerlink" href="#fourier-transformation" title="Permanent link">&para;</a></h2>
+<h3 id="kontinuierliche-ft-ctft">Kontinuierliche FT (CTFT)<a class="headerlink" href="#kontinuierliche-ft-ctft" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>X(f) = ∫ x(t) · e^{−j2πft} dt   (Analyse / Vorwärts)
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>x(t) = ∫ X(f) · e^{+j2πft} df   (Synthese / Rückwärts)
+</span></code></pre></div>
+<h3 id="wichtige-eigenschaften">Wichtige Eigenschaften<a class="headerlink" href="#wichtige-eigenschaften" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Eigenschaft</th>
+<th>Formel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linearität</td>
+<td>αx(t) + βy(t) ↔ αX(f) + βY(f)</td>
+</tr>
+<tr>
+<td>Zeitverschiebung</td>
+<td>x(t − t₀) ↔ X(f) · e^{−j2πft₀}  (nur Phase ändert sich!)</td>
+</tr>
+<tr>
+<td>Skalierung</td>
+<td>x(at) ↔ (1/|a|)·X(f/a)  (breit im Zeit = schmal in Freq.)</td>
+</tr>
+<tr>
+<td>Faltungstheorem</td>
+<td>(h * x)(t) ↔ H(f) · X(f)</td>
+</tr>
+<tr>
+<td>Parseval</td>
+<td>∫|x(t)|² dt = ∫|X(f)|² df  (Energie erhalten)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wichtige-transformationspaare">Wichtige Transformationspaare<a class="headerlink" href="#wichtige-transformationspaare" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Zeitbereich x(t)</th>
+<th>Frequenzbereich X(f)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>δ(t)</td>
+<td>1 (alle Frequenzen gleich stark)</td>
+</tr>
+<tr>
+<td>1 (DC-Signal)</td>
+<td>δ(f)</td>
+</tr>
+<tr>
+<td>cos(2πf₀t)</td>
+<td>½[δ(f−f₀) + δ(f+f₀)]</td>
+</tr>
+<tr>
+<td>sin(2πf₀t)</td>
+<td>j·½[δ(f+f₀) − δ(f−f₀)]</td>
+</tr>
+<tr>
+<td>rect(t)</td>
+<td>sinc(f)</td>
+</tr>
+<tr>
+<td>Gauss e^{−πt²}</td>
+<td>Gauss e^{−πf²}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fourier-landschaft-uberblick">Fourier-Landschaft (Überblick)<a class="headerlink" href="#fourier-landschaft-uberblick" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Aperiodisch</th>
+<th>Periodisch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kontinuierlich</strong></td>
+<td>CTFT</td>
+<td>Fourier-Reihe (FS)</td>
+</tr>
+<tr>
+<td><strong>Diskret</strong></td>
+<td>DTFT</td>
+<td>DFT (endlich, berechenbar)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Schlüsselprinzip</p>
+<p>Faltung im Zeitbereich = Multiplikation im Frequenzbereich (und umgekehrt).</p>
+</div>
+<hr />
+<h2 id="dft-fft-stft">DFT, FFT &amp; STFT<a class="headerlink" href="#dft-fft-stft" title="Permanent link">&para;</a></h2>
+<h3 id="diskrete-fourier-transformation-dft">Diskrete Fourier-Transformation (DFT)<a class="headerlink" href="#diskrete-fourier-transformation-dft" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>X[k] = Σ_{n=0}^{N−1} x[n] · e^{−j2πkn/N}   für k = 0, 1, ..., N−1
+</span></code></pre></div>
+<ul>
+<li>N = Anzahl Samples, k = Frequenzindex</li>
+<li><strong>Frequenzauflösung:</strong> Δf = f_s / N</li>
+<li>Komplexität: O(N²) – bei großem N sehr langsam</li>
+</ul>
+<h3 id="fast-fourier-transform-fft">Fast Fourier Transform (FFT)<a class="headerlink" href="#fast-fourier-transform-fft" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Algorithmische Implementierung der DFT mittels Divide-and-Conquer</li>
+<li>Komplexität: <strong>O(N log N)</strong> statt O(N²) → bei N=1024: ~100× schneller</li>
+<li>FFT ≠ DFT: FFT ist ein <em>Algorithmus</em>, DFT ist die <em>mathematische Transformation</em></li>
+</ul>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Python</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">scipy</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fft</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="n">scipy</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">fftfreq</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">d</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">f_s</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="short-time-fourier-transform-stft">Short-Time Fourier Transform (STFT)<a class="headerlink" href="#short-time-fourier-transform-stft" title="Permanent link">&para;</a></h3>
+<ul>
+<li>FFT auf gleitenden Fenstern → Zeit-Frequenz-Darstellung (Spektrogramm)</li>
+<li>Trade-off: Schmales Fenster = gute Zeitauflösung, schlechte Frequenzauflösung</li>
+<li>Anwendung: Sprachanalyse, Musikerkennung</li>
+</ul>
+<hr />
+<h2 id="faltung-korrelation">Faltung &amp; Korrelation<a class="headerlink" href="#faltung-korrelation" title="Permanent link">&para;</a></h2>
+<h3 id="faltung-convolution">Faltung (Convolution)<a class="headerlink" href="#faltung-convolution" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Kontinuierlich:  y(t) = (h * x)(t) = ∫ h(τ) · x(t−τ) dτ
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Diskret:         y[n] = Σ_k h[k] · x[n−k]
+</span></code></pre></div>
+<ul>
+<li>Interpretation: Spiegeln des Kernels, verschieben und aufsummieren</li>
+<li>h(t) = Impulsantwort → charakterisiert das System vollständig</li>
+<li>Faltungstheorem: h*x ↔ H(ω)·X(ω)</li>
+</ul>
+<h3 id="kreuzkorrelation-cross-correlation">Kreuzkorrelation (Cross-Correlation)<a class="headerlink" href="#kreuzkorrelation-cross-correlation" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>R_fg(τ) = ∫ f*(t) · g(t+τ) dt   (kein Spiegeln!)
+</span></code></pre></div>
+<ul>
+<li>Misst die <strong>Ähnlichkeit</strong> zweier Signale bei Verschiebung τ</li>
+<li>Peak bei τ → beste Ausrichtung; Zeitverzögerungsschätzung</li>
+</ul>
+<h3 id="autokorrelation">Autokorrelation<a class="headerlink" href="#autokorrelation" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>R_xx(τ) = ∫ x*(t) · x(t+τ) dt
+</span></code></pre></div>
+<ul>
+<li>Ähnlichkeit eines Signals mit sich selbst → Periodizitätsdetektion</li>
+<li>R_xx(0) = Signalenergie (Maximum)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Faltung</th>
+<th>Kreuzkorrelation</th>
+<th>Autokorrelation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spiegeln?</td>
+<td>Ja</td>
+<td>Nein</td>
+<td>Nein</td>
+</tr>
+<tr>
+<td>Zweck</td>
+<td>Filter / Systemantwort</td>
+<td>Signalvergleich</td>
+<td>Periodizität</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Python</p>
+<p><code>scipy.signal.convolve()</code>, <code>scipy.signal.correlate()</code></p>
+</div>
+<hr />
+<h2 id="filterung">Filterung<a class="headerlink" href="#filterung" title="Permanent link">&para;</a></h2>
+<h3 id="spektrale-filtertypen">Spektrale Filtertypen<a class="headerlink" href="#spektrale-filtertypen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Passiert</th>
+<th>Sperrt</th>
+<th>Anwendung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiefpass (LP)</td>
+<td>f &lt; f_c</td>
+<td>Hohe Freq.</td>
+<td>Glätten, Rauschreduktion</td>
+</tr>
+<tr>
+<td>Hochpass (HP)</td>
+<td>f &gt; f_c</td>
+<td>Tiefe Freq.</td>
+<td>Kantendetektion, Schärfen</td>
+</tr>
+<tr>
+<td>Bandpass (BP)</td>
+<td>f₁ &lt; f &lt; f₂</td>
+<td>Rest</td>
+<td>Kommunikation, EEG-Bänder</td>
+</tr>
+<tr>
+<td>Bandstopp (BS)</td>
+<td>alles außer f₁–f₂</td>
+<td>f₁–f₂</td>
+<td>50-Hz-Netzbrumm entfernen</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Idealer Tiefpass</p>
+<p>rect im Frequenzbereich → sinc im Zeitbereich → unendlich lang, daher physikalisch <em>nicht</em> realisierbar.</p>
+</div>
+<h3 id="fensterfunktionen">Fensterfunktionen<a class="headerlink" href="#fensterfunktionen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Fenster</th>
+<th>Übergangsband</th>
+<th>Nebenkeule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rechteck (Boxcar)</td>
+<td>Schmal</td>
+<td>Hoch (−13 dB)</td>
+</tr>
+<tr>
+<td>Hann</td>
+<td>Mittel</td>
+<td>Niedrig (−31 dB)</td>
+</tr>
+<tr>
+<td>Hamming</td>
+<td>Mittel</td>
+<td>Niedrig (−41 dB)</td>
+</tr>
+<tr>
+<td>Gaussian</td>
+<td>Breit</td>
+<td>Sehr niedrig</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fir-vs-iir-filter">FIR vs. IIR Filter<a class="headerlink" href="#fir-vs-iir-filter" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>FIR</th>
+<th>IIR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Impulsantwort</td>
+<td>Endlich lang</td>
+<td>Unendlich (Rückkopplung)</td>
+</tr>
+<tr>
+<td>Phasengang</td>
+<td>Linear möglich</td>
+<td>Nichtlinear</td>
+</tr>
+<tr>
+<td>Stabilität</td>
+<td>Immer stabil</td>
+<td>Kann instabil werden</td>
+</tr>
+<tr>
+<td>Beispiel</td>
+<td>Box-Filter, Gaussian</td>
+<td>Butterworth-Filter</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Butterworth</p>
+<p>IIR-Filter mit maximal flachem Durchlassbereich (kein Ripple). Ordnung bestimmt Steilheit der Flanke.</p>
+</div>
+<hr />
+<h2 id="sinc-rauschen-dezibel-kompression">sinc, Rauschen, Dezibel, Kompression<a class="headerlink" href="#sinc-rauschen-dezibel-kompression" title="Permanent link">&para;</a></h2>
+<h3 id="sinc-funktion">sinc-Funktion<a class="headerlink" href="#sinc-funktion" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sinc(t) = sin(πt) / (πt)    sinc(0) = 1, Nullstellen bei t = ±1, ±2, ...
+</span></code></pre></div>
+<ul>
+<li>FT(rect) = sinc → idealer Tiefpass im Zeitbereich ist eine sinc-Funktion</li>
+<li>FT(sinc) = rect → idealer Tiefpass im Frequenzbereich</li>
+</ul>
+<h3 id="rauschen">Rauschen<a class="headerlink" href="#rauschen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Modell</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Additiv (AWGN)</td>
+<td>y(t) = x(t) + n(t); Gauss-Rauschen mit Mittelwert 0</td>
+</tr>
+<tr>
+<td>Multiplikativ</td>
+<td>y(t) = x(t) · n(t); z. B. Speckle in Ultraschallbildern</td>
+</tr>
+<tr>
+<td>Salt &amp; Pepper</td>
+<td>Zufällige weiße/schwarze Pixel; Median-Filter wirksam</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dezibel-skala">Dezibel-Skala<a class="headerlink" href="#dezibel-skala" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Leistung [dB]:  L = 10 · log₁₀(P / P_ref)
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Amplitude [dB]: L = 20 · log₁₀(A / A_ref)
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Schalldruck: A_ref = 20 µPa (Hörschwelle)
+</span></code></pre></div>
+<ul>
+<li>+3 dB ≈ Leistungsverdopplung; +6 dB ≈ Amplitudenverdopplung</li>
+<li>−3 dB = halbe Leistung = Grenzfrequenz-Definition bei Filtern</li>
+</ul>
+<h3 id="kompression-grundlagen">Kompression (Grundlagen)<a class="headerlink" href="#kompression-grundlagen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Methode</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Verlustlos</td>
+<td>RLE (Run-Length Encoding)</td>
+<td>"WWWWWBBB" → "5W3B"; BMP</td>
+</tr>
+<tr>
+<td>Verlustlos</td>
+<td>Huffman-Coding</td>
+<td>Häufige Symbole = kurze Codes; PNG</td>
+</tr>
+<tr>
+<td>Verlustbehaftet</td>
+<td>Diskardierung von Information</td>
+<td>JPEG, MP3</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.highlight", "search.suggest", "search.share", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3908 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Prüfungszusammenfassungen ZHAW Applied Digital Life Science">
+      
+      
+        <meta name="author" content="Javier Martinez Alvarez">
+      
+      
+      
+        <link rel="prev" href="../01-signalverarbeitung/">
+      
+      
+        <link rel="next" href="../pruefungstipps/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Bildverarbeitung - ADLS — Prüfungszusammenfassungen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#teil-ii-bildverarbeitung" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../../.." title="ADLS — Prüfungszusammenfassungen" class="md-header__button md-logo" aria-label="ADLS — Prüfungszusammenfassungen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ADLS — Prüfungszusammenfassungen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bildverarbeitung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dunkelmodus"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dunkelmodus" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Hellmodus"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Hellmodus" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Teilen" aria-label="Teilen" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Startseite
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  4. Semester
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ADLS — Prüfungszusammenfassungen" class="md-nav__button md-logo" aria-label="ADLS — Prüfungszusammenfassungen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ADLS — Prüfungszusammenfassungen
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Semester
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. Semester
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../neune/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NeuNe — Neural Networks
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    NeuNe — Neural Networks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neune/01-perceptron/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Perceptron
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neune/02-mlp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MLP & Backpropagation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neune/03-training/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Training Pipeline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neune/04-cnn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CNN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neune/05-rnn/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RNN
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neune/06-nlp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NLP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../neune/pruefungstipps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prüfungstipps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../orgchem/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OrgChem — Organische Chemie
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OrgChem — Organische Chemie
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgchem/01-bindungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C-Bindungen & Hybridisierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgchem/02-nomenklatur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IUPAC-Nomenklatur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgchem/03-isomerie/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Isomerie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgchem/04-funktionelle-gruppen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Funktionelle Gruppen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgchem/05-reaktionen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reaktionen & Mechanismen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgchem/06-gleichgewicht/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chemisches Gleichgewicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../orgchem/pruefungstipps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prüfungstipps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP — Image & Signal Processing
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ISP — Image & Signal Processing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-signalverarbeitung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signalverarbeitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bildverarbeitung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bildverarbeitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bildreprasentation-farbraume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bildrepräsentation &amp; Farbräume
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bildrepräsentation &amp; Farbräume">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#digitale-bilder-als-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digitale Bilder als Arrays
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speicherverbrauch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Speicherverbrauch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farbraume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farbräume
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayer-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bayer-Filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bildqualitats-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bildqualitäts-Attribute
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bildqualitäts-Attribute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qualitatsmetriken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qualitätsmetriken
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#punktoperationen-histogramme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Punktoperationen &amp; Histogramme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Punktoperationen &amp; Histogramme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#punktoperationen-pixelweise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Punktoperationen (pixelweise)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histogramm-operationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histogramm-Operationen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometrische-transformationen-affine-matrizen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometrische Transformationen &amp; Affine Matrizen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometrische Transformationen &amp; Affine Matrizen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#affine-transformationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Affine Transformationen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-transformationsmatrizen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Transformationsmatrizen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpolation-bei-geometrischen-transformationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpolation bei geometrischen Transformationen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2d-fourier-spektralfilterung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2D-Fourier &amp; Spektralfilterung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2D-Fourier &amp; Spektralfilterung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2d-fourier-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2D-Fourier-Transformation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spektralfilterung-im-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spektralfilterung im 2D
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2d-faltung-raumliche-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2D-Faltung &amp; räumliche Filter
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2D-Faltung &amp; räumliche Filter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2d-faltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2D-Faltung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-2d-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige 2D-Kernel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kantendetektion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kantendetektion
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kantendetektion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methoden-im-uberblick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methoden im Überblick
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canny-algorithmus-4-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canny-Algorithmus (4 Schritte)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-erkennung-sift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature-Erkennung &amp; SIFT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature-Erkennung &amp; SIFT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lokale-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lokale Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sift-scale-invariant-feature-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SIFT — Scale-Invariant Feature Transform
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-matching-image-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Matching &amp; Image Registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morphologische-operationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Morphologische Operationen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Morphologische Operationen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grundoperationen-auf-binarbildern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grundoperationen (auf Binärbildern)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connected-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connected Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distance-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distance Transform
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binare-maskenoperationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binäre Maskenoperationen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segmentierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segmentierung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dateiformate-jpeg-kompression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dateiformate &amp; JPEG-Kompression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dateiformate &amp; JPEG-Kompression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raster-vs-vektorgrafiken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Raster- vs. Vektorgrafiken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bezier-kurven" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bézier-Kurven
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jpeg-kompression-5-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JPEG-Kompression (5 Schritte)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lossless-kompression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lossless Kompression
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qr-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QR-Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QR-Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grundlagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grundlagen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struktur-eines-qr-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Struktur eines QR-Codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fehlerkorrektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fehlerkorrektur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pruefungstipps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prüfungstipps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mcs/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCS — Modellierung komplexer Systeme
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MCS — Modellierung komplexer Systeme
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/01-systemdynamik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systemdynamik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/02-numerische-integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numerische Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/03-logistisches-wachstum/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logistisches Wachstum
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/04-ernte-modell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ernte-Modell & Bifurkation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/05-populationen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2-Populationen-Modell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/06-chaos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chaos & Nichtlineare Systeme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mcs/pruefungstipps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prüfungstipps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../das/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DaS — Data and Society
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DaS — Data and Society
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/01-macht-der-daten/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Die Macht der Daten
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/02-narrow-corridor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Narrow Corridor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/03-turing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Entscheidungsproblem & Turing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/04-algorithmen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithmen & Explore/Exploit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/05-ki-geschichte/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geschichte der KI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/06-techno-optimismus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Techno-Optimismus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/07-kognitive-biases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kognitive Biases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../das/pruefungstipps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prüfungstipps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../dsv/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DSV — Digital Storytelling & Visualisation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DSV — Digital Storytelling & Visualisation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dsv/01-storytelling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Storytelling Grundlagen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dsv/02-author-reader/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Author-Driven vs. Reader-Driven
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dsv/03-datenskalen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datenskalen (NOIR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dsv/04-visuelle-variablen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visuelle Variablen (Bertin)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dsv/05-data-ink/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data-Ink Ratio & Chartjunk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dsv/06-visualisierungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualisierungs-Verzeichnis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dsv/pruefungstipps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prüfungstipps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bildreprasentation-farbraume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bildrepräsentation &amp; Farbräume
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bildrepräsentation &amp; Farbräume">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#digitale-bilder-als-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digitale Bilder als Arrays
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#speicherverbrauch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Speicherverbrauch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farbraume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farbräume
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayer-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bayer-Filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bildqualitats-attribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bildqualitäts-Attribute
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bildqualitäts-Attribute">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#qualitatsmetriken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qualitätsmetriken
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#punktoperationen-histogramme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Punktoperationen &amp; Histogramme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Punktoperationen &amp; Histogramme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#punktoperationen-pixelweise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Punktoperationen (pixelweise)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histogramm-operationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histogramm-Operationen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geometrische-transformationen-affine-matrizen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Geometrische Transformationen &amp; Affine Matrizen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geometrische Transformationen &amp; Affine Matrizen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#affine-transformationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Affine Transformationen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-transformationsmatrizen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Transformationsmatrizen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpolation-bei-geometrischen-transformationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interpolation bei geometrischen Transformationen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2d-fourier-spektralfilterung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2D-Fourier &amp; Spektralfilterung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2D-Fourier &amp; Spektralfilterung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2d-fourier-transformation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2D-Fourier-Transformation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spektralfilterung-im-2d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spektralfilterung im 2D
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2d-faltung-raumliche-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2D-Faltung &amp; räumliche Filter
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2D-Faltung &amp; räumliche Filter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2d-faltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2D-Faltung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-2d-kernel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige 2D-Kernel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kantendetektion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kantendetektion
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kantendetektion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methoden-im-uberblick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methoden im Überblick
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canny-algorithmus-4-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Canny-Algorithmus (4 Schritte)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#feature-erkennung-sift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature-Erkennung &amp; SIFT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature-Erkennung &amp; SIFT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lokale-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lokale Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sift-scale-invariant-feature-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SIFT — Scale-Invariant Feature Transform
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-matching-image-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Feature Matching &amp; Image Registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morphologische-operationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Morphologische Operationen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Morphologische Operationen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grundoperationen-auf-binarbildern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grundoperationen (auf Binärbildern)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connected-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connected Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distance-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distance Transform
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binare-maskenoperationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binäre Maskenoperationen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segmentierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segmentierung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dateiformate-jpeg-kompression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dateiformate &amp; JPEG-Kompression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dateiformate &amp; JPEG-Kompression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raster-vs-vektorgrafiken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Raster- vs. Vektorgrafiken
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bezier-kurven" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bézier-Kurven
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jpeg-kompression-5-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JPEG-Kompression (5 Schritte)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lossless-kompression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lossless Kompression
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qr-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QR-Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="QR-Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grundlagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grundlagen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struktur-eines-qr-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Struktur eines QR-Codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fehlerkorrektur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fehlerkorrektur
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="teil-ii-bildverarbeitung">Teil II: Bildverarbeitung<a class="headerlink" href="#teil-ii-bildverarbeitung" title="Permanent link">&para;</a></h1>
+<h2 id="bildreprasentation-farbraume">Bildrepräsentation &amp; Farbräume<a class="headerlink" href="#bildreprasentation-farbraume" title="Permanent link">&para;</a></h2>
+<h3 id="digitale-bilder-als-arrays">Digitale Bilder als Arrays<a class="headerlink" href="#digitale-bilder-als-arrays" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Graustufenbild: 2D-Array [Höhe × Breite], Werte 0–255 (uint8)</li>
+<li>Farbbild: 3D-Array [Höhe × Breite × Kanäle]</li>
+<li>Datentypen: uint8 (0–255), uint16, float32 (0.0–1.0)</li>
+</ul>
+<h3 id="speicherverbrauch">Speicherverbrauch<a class="headerlink" href="#speicherverbrauch" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Größe [Bytes] = Breite × Höhe × Kanäle × (Bits_pro_Kanal / 8)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Beispiel: 1920×1080 RGB uint8 = 1920 × 1080 × 3 ≈ 6 MB
+</span></code></pre></div>
+<h3 id="farbraume">Farbräume<a class="headerlink" href="#farbraume" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Farbraum</th>
+<th>Kanäle</th>
+<th>Anwendung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RGB</td>
+<td>Rot, Grün, Blau</td>
+<td>Standard-Anzeige</td>
+</tr>
+<tr>
+<td>HSV</td>
+<td>Hue (Farbton), Saturation, Value</td>
+<td>Farbbasierte Segmentierung</td>
+</tr>
+<tr>
+<td>Lab (CIELAB)</td>
+<td>L (Helligkeit), a, b</td>
+<td>Farbdistanzmessung, wahrnehmungsgleichmäßig</td>
+</tr>
+<tr>
+<td>Graustufen</td>
+<td>1 Kanal (Intensität)</td>
+<td>Effizienz, viele Algorithmen</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">OpenCV = BGR</p>
+<p>OpenCV liest Bilder als <strong>BGR</strong> (nicht RGB!) → <code>cv2.cvtColor(img, cv2.COLOR_BGR2RGB)</code></p>
+</div>
+<h3 id="bayer-filter">Bayer-Filter<a class="headerlink" href="#bayer-filter" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sensor-Muster in Digitalkameras: Jedes Pixel misst nur eine Farbe (R, G oder B)</li>
+<li>Muster RGGB: 50% Grün, je 25% Rot/Blau – entspricht menschlicher Wahrnehmung</li>
+<li>Demosaicing rekonstruiert alle 3 Farbkanäle pro Pixel</li>
+</ul>
+<hr />
+<h2 id="bildqualitats-attribute">Bildqualitäts-Attribute<a class="headerlink" href="#bildqualitats-attribute" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Auflösung</td>
+<td>Anzahl Pixel; Nyquist gilt auch im Bild → Moire-Effekte möglich</td>
+</tr>
+<tr>
+<td>Quantisierung</td>
+<td>Bittiefe; 8 bit = 256 Stufen; mehr Bits = weichere Übergänge</td>
+</tr>
+<tr>
+<td>Kontrast</td>
+<td>Unterschied zwischen hellen und dunklen Bereichen</td>
+</tr>
+<tr>
+<td>Dynamikbereich</td>
+<td>Verhältnis von max. zu min. darstellbarem Wert</td>
+</tr>
+<tr>
+<td>Belichtung</td>
+<td>Über-/Unterbelichtung → Informationsverlust in Lichtern/Schatten</td>
+</tr>
+<tr>
+<td>Rauschen</td>
+<td>Zufällige Intensitätsschwankungen</td>
+</tr>
+<tr>
+<td>Unschärfe (Blur)</td>
+<td>Bewegungsunschärfe, Defokus; hohe Frequenzen gehen verloren</td>
+</tr>
+<tr>
+<td>Artefakte</td>
+<td>JPEG-Blockierung, Aliasing, Moire-Muster</td>
+</tr>
+<tr>
+<td>Farbtreue</td>
+<td>Wie gut entsprechen Farben der Realität?</td>
+</tr>
+</tbody>
+</table>
+<h3 id="qualitatsmetriken">Qualitätsmetriken<a class="headerlink" href="#qualitatsmetriken" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>SNR = 20 · log₁₀(μ_signal / σ_noise)  [dB]
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>CNR = (μ_ROI − μ_background) / σ_background
+</span></code></pre></div>
+<hr />
+<h2 id="punktoperationen-histogramme">Punktoperationen &amp; Histogramme<a class="headerlink" href="#punktoperationen-histogramme" title="Permanent link">&para;</a></h2>
+<h3 id="punktoperationen-pixelweise">Punktoperationen (pixelweise)<a class="headerlink" href="#punktoperationen-pixelweise" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Formel</th>
+<th>Effekt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invertierung</td>
+<td>y = 255 − x</td>
+<td>Negativ-Bild</td>
+</tr>
+<tr>
+<td>Gamma-Korrektur</td>
+<td>y = x^γ (normiert); γ&lt;1 hellt auf, γ&gt;1 verdunkelt</td>
+<td>Helligkeitsanpassung</td>
+</tr>
+<tr>
+<td>Kontraststreckung</td>
+<td>Lineares Mapping auf [min, max]</td>
+<td>Mehr Kontrast</td>
+</tr>
+<tr>
+<td>Thresholding</td>
+<td>y = 255 wenn x&gt;T, sonst 0</td>
+<td>Binarisierung</td>
+</tr>
+</tbody>
+</table>
+<h3 id="histogramm-operationen">Histogramm-Operationen<a class="headerlink" href="#histogramm-operationen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Histogram Equalization:</strong> Gleichmäßige Verteilung der Intensitäten → maximaler Kontrast</li>
+<li><strong>Histogram Matching:</strong> Histogramm an Referenz-Bild anpassen</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Python</p>
+<p><code>np.histogram()</code>, <code>cv2.equalizeHist()</code></p>
+</div>
+<hr />
+<h2 id="geometrische-transformationen-affine-matrizen">Geometrische Transformationen &amp; Affine Matrizen<a class="headerlink" href="#geometrische-transformationen-affine-matrizen" title="Permanent link">&para;</a></h2>
+<h3 id="affine-transformationen">Affine Transformationen<a class="headerlink" href="#affine-transformationen" title="Permanent link">&para;</a></h3>
+<p>y = A·x + t — Homogene Form (3×3 Matrix, ermöglicht Translation):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>⎡y₀⎤   ⎡a₀₀  a₀₁  t₀⎤   ⎡x₀⎤
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>⎢y₁⎥ = ⎢a₁₀  a₁₁  t₁⎥ · ⎢x₁⎥
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>⎣ 1⎦   ⎣ 0    0    1 ⎦   ⎣ 1⎦
+</span></code></pre></div>
+<h3 id="wichtige-transformationsmatrizen">Wichtige Transformationsmatrizen<a class="headerlink" href="#wichtige-transformationsmatrizen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Transformation</th>
+<th>Matrix A (2×2 Teil)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Identität</td>
+<td>[[1, 0], [0, 1]]</td>
+</tr>
+<tr>
+<td>Skalierung (isotrop, s)</td>
+<td>[[s, 0], [0, s]]</td>
+</tr>
+<tr>
+<td>Rotation um φ</td>
+<td>[[cos φ, −sin φ], [sin φ, cos φ]]</td>
+</tr>
+<tr>
+<td>Spiegelung (y-Achse)</td>
+<td>[[−1, 0], [0, 1]]</td>
+</tr>
+<tr>
+<td>Scherung (x)</td>
+<td>[[1, sh], [0, 1]]</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p>Translation ist <em>keine</em> lineare Transformation → braucht homogene 3×3 Matrix!</p>
+</div>
+<p><strong>Composite:</strong> Mehrere Transformationen verketten via A_total = Aₙ · ... · A₂ · A₁ (Reihenfolge beachten!)</p>
+<h3 id="interpolation-bei-geometrischen-transformationen">Interpolation bei geometrischen Transformationen<a class="headerlink" href="#interpolation-bei-geometrischen-transformationen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Qualität</th>
+<th>Geschwindigkeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nearest-Neighbor</td>
+<td>Niedrig (stufig)</td>
+<td>Sehr schnell</td>
+</tr>
+<tr>
+<td>Bilinear</td>
+<td>Mittel</td>
+<td>Schnell</td>
+</tr>
+<tr>
+<td>Bikubisch</td>
+<td>Hoch</td>
+<td>Langsamer</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Python</p>
+<p><code>cv2.warpAffine()</code>, <code>cv2.getRotationMatrix2D()</code>, <code>cv2.warpPerspective()</code>, <code>cv2.getPerspectiveTransform()</code></p>
+</div>
+<hr />
+<h2 id="2d-fourier-spektralfilterung">2D-Fourier &amp; Spektralfilterung<a class="headerlink" href="#2d-fourier-spektralfilterung" title="Permanent link">&para;</a></h2>
+<h3 id="2d-fourier-transformation">2D-Fourier-Transformation<a class="headerlink" href="#2d-fourier-transformation" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>F(u,v) = ΣΣ f(x,y) · e^{−j2π(ux/M + vy/N)}
+</span></code></pre></div>
+<ul>
+<li>Tiefe Frequenzen (Bildmitte nach fftshift) = grobe Strukturen</li>
+<li>Hohe Frequenzen (Bildrand) = Kanten, Details, Rauschen</li>
+<li>Sinus-Gittermuster → punktförmiges Spektrum; Bilder ≈ Superposition solcher Gitter</li>
+</ul>
+<h3 id="spektralfilterung-im-2d">Spektralfilterung im 2D<a class="headerlink" href="#spektralfilterung-im-2d" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Im Frequenzbereich</th>
+<th>Effekt im Bild</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tiefpass (LP)</td>
+<td>Kreisförmige Maske, behält Mitte</td>
+<td>Weichzeichnen</td>
+</tr>
+<tr>
+<td>Hochpass (HP)</td>
+<td>Maske sperrt Mitte</td>
+<td>Kanten betonen</td>
+</tr>
+<tr>
+<td>Gauss</td>
+<td>Gauss-Maske</td>
+<td>Glätten ohne Ringing</td>
+</tr>
+<tr>
+<td>Bandpass / Notch</td>
+<td>Ring / einzelne Punkte</td>
+<td>Periodische Artefakte entfernen</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Python</p>
+<p><code>scipy.fft.fft2()</code>, <code>np.fft.fftshift()</code>, Maske anlegen, dann <code>ifft2()</code></p>
+</div>
+<hr />
+<h2 id="2d-faltung-raumliche-filter">2D-Faltung &amp; räumliche Filter<a class="headerlink" href="#2d-faltung-raumliche-filter" title="Permanent link">&para;</a></h2>
+<h3 id="2d-faltung">2D-Faltung<a class="headerlink" href="#2d-faltung" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>(f * h)[x,y] = ΣΣ f[x−s, y−t] · h[s,t]
+</span></code></pre></div>
+<ul>
+<li>Output-Größe (Valid-Padding): (M − k + 1) × (N − k + 1)</li>
+<li>Faltungstheorem gilt auch in 2D: f * h ↔ F(u,v) · H(u,v)</li>
+</ul>
+<h3 id="wichtige-2d-kernel">Wichtige 2D-Kernel<a class="headerlink" href="#wichtige-2d-kernel" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Kernel</th>
+<th>Wirkung</th>
+<th>Typ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Box-Filter</td>
+<td>Gleichmäßiges Weichzeichnen</td>
+<td>Tiefpass</td>
+</tr>
+<tr>
+<td>Gaussian</td>
+<td>Gewichtetes Weichzeichnen, kein Ringing</td>
+<td>Tiefpass</td>
+</tr>
+<tr>
+<td>Sobel x / y</td>
+<td>Gradient horizontal / vertikal</td>
+<td>Kantendetektion</td>
+</tr>
+<tr>
+<td>Laplacian</td>
+<td>2. Ableitung, isotropisch</td>
+<td>Hochpass</td>
+</tr>
+<tr>
+<td>LoG</td>
+<td>Gauss dann Laplacian, rauschrobuster</td>
+<td>Bandpass</td>
+</tr>
+<tr>
+<td>Unsharp Mask</td>
+<td>Original + Hochpassanteil</td>
+<td>Schärfen</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Python</p>
+<p><code>cv2.filter2D()</code>, <code>scipy.signal.convolve2d()</code></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">CNN-Verbindung</p>
+<p>CNN-Faltung = technisch 2D-Kreuzkorrelation (Kernel wird nicht gespiegelt).</p>
+</div>
+<hr />
+<h2 id="kantendetektion">Kantendetektion<a class="headerlink" href="#kantendetektion" title="Permanent link">&para;</a></h2>
+<h3 id="methoden-im-uberblick">Methoden im Überblick<a class="headerlink" href="#methoden-im-uberblick" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Basis</th>
+<th>Eigenschaften</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sobel</td>
+<td>1. Ableitung (Gradient)</td>
+<td>Einfach, rauschempfindlich</td>
+</tr>
+<tr>
+<td>Prewitt</td>
+<td>1. Ableitung</td>
+<td>Ähnlich Sobel, gleichgewichtet</td>
+</tr>
+<tr>
+<td>Laplacian</td>
+<td>2. Ableitung</td>
+<td>Isotropisch, rauschempfindlich</td>
+</tr>
+<tr>
+<td>LoG (Marr-Hildreth)</td>
+<td>Gauss + Laplacian</td>
+<td>Rauschrobuster, Zero-Crossings = Kanten</td>
+</tr>
+<tr>
+<td>Canny</td>
+<td>Mehrstufig</td>
+<td>State-of-the-art, robusteste Methode</td>
+</tr>
+</tbody>
+</table>
+<h3 id="canny-algorithmus-4-schritte">Canny-Algorithmus (4 Schritte)<a class="headerlink" href="#canny-algorithmus-4-schritte" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Gauss-Glättung:</strong> Rauschen reduzieren</li>
+<li><strong>Gradient-Berechnung:</strong> Sobel in x und y → Magnitude + Richtung</li>
+<li><strong>Non-Maximum Suppression:</strong> Kanten auf 1 Pixel Breite ausdünnen</li>
+<li><strong>Hysteresis-Thresholding:</strong> Starke Kanten (T_high) + schwache (T_low) wenn mit starken verbunden</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Python</p>
+<p><code>cv2.Sobel()</code>, <code>cv2.Canny(img, threshold1, threshold2)</code></p>
+</div>
+<hr />
+<h2 id="feature-erkennung-sift">Feature-Erkennung &amp; SIFT<a class="headerlink" href="#feature-erkennung-sift" title="Permanent link">&para;</a></h2>
+<h3 id="lokale-features">Lokale Features<a class="headerlink" href="#lokale-features" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Keypoint (Interesse-Punkt) + Deskriptor (lokale Beschreibung)</li>
+<li>Sollen robust sein gegenüber: Skalierung, Rotation, Translation, Beleuchtung</li>
+<li>Anwendungen: Image Registration, Stitching, Objekterkennung</li>
+</ul>
+<h3 id="sift-scale-invariant-feature-transform">SIFT — Scale-Invariant Feature Transform<a class="headerlink" href="#sift-scale-invariant-feature-transform" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Scale-Space Extrema Detection:</strong> DoG (Difference of Gaussians) über mehrere Skalen</li>
+<li><strong>Keypoint Localization:</strong> Subpixel-Genauigkeit, schwache Punkte verwerfen</li>
+<li><strong>Orientation Assignment:</strong> Dominante Gradientenrichtung → Rotationsinvarianz</li>
+<li><strong>Feature Descriptor:</strong> 128-dim Vektor aus Gradienten-Histogrammen im 16×16-Patch</li>
+</ol>
+<h3 id="feature-matching-image-registration">Feature Matching &amp; Image Registration<a class="headerlink" href="#feature-matching-image-registration" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Features in beiden Bildern erkennen (SIFT / ORB / Harris)</li>
+<li>Matching: Nearest-Neighbor im Deskriptorenraum + Ratio-Test</li>
+<li>Geometrisches Modell schätzen (Homographie via RANSAC)</li>
+<li>Bild transformieren und blenden (Image Stitching)</li>
+</ol>
+<div class="admonition tip">
+<p>Weitere Detektoren: Harris Corner Detector, SURF, ORB, HOG</p>
+</div>
+<hr />
+<h2 id="morphologische-operationen">Morphologische Operationen<a class="headerlink" href="#morphologische-operationen" title="Permanent link">&para;</a></h2>
+<h3 id="grundoperationen-auf-binarbildern">Grundoperationen (auf Binärbildern)<a class="headerlink" href="#grundoperationen-auf-binarbildern" title="Permanent link">&para;</a></h3>
+<p>Strukturierendes Element (SE) = kleine Maske, die über das Bild gleitet.</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Beschreibung</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dilation</td>
+<td>Pixel = Vordergrund wenn SE überlappt</td>
+<td>Objekte wachsen, Lücken schließen</td>
+</tr>
+<tr>
+<td>Erosion</td>
+<td>Pixel = Vordergrund wenn SE vollständig passt</td>
+<td>Objekte schrumpfen, kleine Objekte weg</td>
+</tr>
+<tr>
+<td>Opening = Erosion + Dilation</td>
+<td>Erosion dann Dilation</td>
+<td>Rauschen entfernen, Objekte trennen</td>
+</tr>
+<tr>
+<td>Closing = Dilation + Erosion</td>
+<td>Dilation dann Erosion</td>
+<td>Löcher füllen, Objekte verbinden</td>
+</tr>
+</tbody>
+</table>
+<h3 id="connected-components">Connected Components<a class="headerlink" href="#connected-components" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Zusammenhängende Pixel gleichen Labels</li>
+<li>Attribute: Fläche, Zentroid, Bounding Box, Kontur</li>
+<li>4-Konnektivität (oben/unten/links/rechts) oder 8-Konnektivität (+Diagonalen)</li>
+</ul>
+<h3 id="distance-transform">Distance Transform<a class="headerlink" href="#distance-transform" title="Permanent link">&para;</a></h3>
+<p>Für jeden Vordergrundpixel: Distanz zum nächsten Hintergrundpixel → nützlich für Watershed-Segmentierung.</p>
+<h3 id="binare-maskenoperationen">Binäre Maskenoperationen<a class="headerlink" href="#binare-maskenoperationen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Anwendung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AND</td>
+<td>ROI ausschneiden</td>
+</tr>
+<tr>
+<td>OR</td>
+<td>Masken kombinieren</td>
+</tr>
+<tr>
+<td>XOR</td>
+<td>Unterschiede finden</td>
+</tr>
+<tr>
+<td>NOT</td>
+<td>Maske invertieren</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Python</p>
+<p><code>cv2.erode()</code>, <code>cv2.dilate()</code>, <code>cv2.morphologyEx()</code>, <code>cv2.connectedComponents()</code>, <code>cv2.distanceTransform()</code></p>
+</div>
+<hr />
+<h2 id="segmentierung">Segmentierung<a class="headerlink" href="#segmentierung" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Prinzip</th>
+<th>Stärke / Schwäche</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Globales Thresholding</td>
+<td>Fester Schwellwert T</td>
+<td>Einfach; versagt bei ungleichmäßiger Beleuchtung</td>
+</tr>
+<tr>
+<td>Adaptives Thresholding</td>
+<td>Lokaler Schwellwert pro Region</td>
+<td>Robuster bei variabler Helligkeit</td>
+</tr>
+<tr>
+<td>Color Clustering (k-Means)</td>
+<td>Cluster im Farbraum</td>
+<td>Flexibel; Anzahl Cluster muss bekannt sein</td>
+</tr>
+<tr>
+<td>Watershed</td>
+<td>Gradient als Topographie; Fluten von Minima</td>
+<td>Gut für berührende Objekte; marker-basiert empfohlen</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Python</p>
+<p><code>cv2.threshold()</code>, <code>cv2.adaptiveThreshold()</code>, <code>cv2.watershed()</code></p>
+</div>
+<hr />
+<h2 id="dateiformate-jpeg-kompression">Dateiformate &amp; JPEG-Kompression<a class="headerlink" href="#dateiformate-jpeg-kompression" title="Permanent link">&para;</a></h2>
+<h3 id="raster-vs-vektorgrafiken">Raster- vs. Vektorgrafiken<a class="headerlink" href="#raster-vs-vektorgrafiken" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Formate</th>
+<th>Eigenschaften</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raster</td>
+<td>PNG, JPEG, BMP, TIFF, GIF</td>
+<td>Pixelbasiert; Qualitätsverlust beim Skalieren</td>
+</tr>
+<tr>
+<td>Vektor</td>
+<td>SVG, PDF, EPS</td>
+<td>Kurvenbasiert; beliebig skalierbar ohne Verlust</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bezier-kurven">Bézier-Kurven<a class="headerlink" href="#bezier-kurven" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Kurven durch Kontrollpunkte P₀, P₁, ..., Pₙ</li>
+<li>Grad 1: Linie; Grad 2: quadratisch; Grad 3: kubisch (häufigste)</li>
+<li>Kurve berührt nur Start- und Endpunkt; Zwischenpunkte ziehen die Kurve an</li>
+</ul>
+<h3 id="jpeg-kompression-5-schritte">JPEG-Kompression (5 Schritte)<a class="headerlink" href="#jpeg-kompression-5-schritte" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Farbraumkonversion:</strong> RGB → YCbCr + Chroma-Subsampling (4:2:0)</li>
+<li><strong>Aufteilung:</strong> Bild in 8×8-Blöcke</li>
+<li><strong>DCT:</strong> Diskrete Kosinus-Transformation → Frequenzkoeffizienten</li>
+<li><strong>Quantisierung:</strong> Koeffizienten / Quantisierungsmatrix (verlustbehafteter Schritt!)</li>
+<li><strong>Entropy-Coding:</strong> Zigzag-Scan + RLE + Huffman → komprimierter Bitstrom</li>
+</ol>
+<div class="admonition warning">
+<p>JPEG ist verlustbehaftet – jedes erneute Speichern verschlechtert Qualität. Für Verarbeitung PNG oder TIFF verwenden!</p>
+</div>
+<h3 id="lossless-kompression">Lossless Kompression<a class="headerlink" href="#lossless-kompression" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Methode</th>
+<th>Idee</th>
+<th>Verwendet in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RLE</td>
+<td>Wiederholungen als (Wert, Anzahl)</td>
+<td>BMP, unkomprimierte Formate</td>
+</tr>
+<tr>
+<td>Huffman</td>
+<td>Häufige Symbole = kurze Codes</td>
+<td>PNG, JPEG-Entropie</td>
+</tr>
+<tr>
+<td>LZW / Deflate</td>
+<td>Wörterbuch-basiert</td>
+<td>GIF, ZIP, PNG</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="qr-code">QR-Code<a class="headerlink" href="#qr-code" title="Permanent link">&para;</a></h2>
+<h3 id="grundlagen">Grundlagen<a class="headerlink" href="#grundlagen" title="Permanent link">&para;</a></h3>
+<ul>
+<li>2D-Barcode, erfunden 1994 (Toyota/Denso Wave); inspiriert vom japanischen Brettspiel Go</li>
+<li>Kodiert bis ~3000 Zeichen; Versionen 1–40 (Version 1 = 21×21 Pixel)</li>
+<li>ISO-Standard: ISO/IEC 18004</li>
+</ul>
+<h3 id="struktur-eines-qr-codes">Struktur eines QR-Codes<a class="headerlink" href="#struktur-eines-qr-codes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Komponente</th>
+<th>Funktion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Positionsmuster (3 Ecken)</td>
+<td>Erkennung und Lokalisierung</td>
+</tr>
+<tr>
+<td>Timing-Markierungen</td>
+<td>Definition des Pixelrasters</td>
+</tr>
+<tr>
+<td>Format-Information</td>
+<td>Fehlerkorrekturlevel und Masken-Muster</td>
+</tr>
+<tr>
+<td>Ausrichtungsmuster</td>
+<td>Korrektur von Perspektivverzerrung (ab Version 2)</td>
+</tr>
+<tr>
+<td>Ruhezone (Quiet Zone)</td>
+<td>Weißer Rand für Erkennbarkeit</td>
+</tr>
+<tr>
+<td>Datenbereiche</td>
+<td>Nutzdaten + Fehlerkorrektur-Daten</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fehlerkorrektur">Fehlerkorrektur<a class="headerlink" href="#fehlerkorrektur" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Reed-Solomon-Codes ermöglichen Rekonstruktion beschädigter Daten</li>
+<li>Level L: 7%, M: 15%, Q: 25%, H: 30% Wiederherstellung möglich</li>
+<li>QR-Codes mit Logo oder leichter Beschädigung können noch gelesen werden</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Python</p>
+<p><code>import qrcode; qr.make(data)</code></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.highlight", "search.suggest", "search.share", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
