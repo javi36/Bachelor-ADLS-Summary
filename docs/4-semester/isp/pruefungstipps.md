@@ -35,3 +35,12 @@
 | `cv2.connectedComponents()` | Zusammenhängende Komponenten |
 | `cv2.warpAffine()` | Affine Transformation |
 | `scipy.interpolate.interp1d()` | 1D-Interpolation |
+
+---
+
+## Abschluss-Zusammenfassung (SW14)
+
+<div class="pdf-embed">
+  <embed src="pdfs/SW14_Finale.pdf" type="application/pdf" width="100%" height="720px">
+  <p class="pdf-fallback">PDF nicht ladbar — <a href="pdfs/SW14_Finale.pdf">herunterladen</a></p>
+</div>
