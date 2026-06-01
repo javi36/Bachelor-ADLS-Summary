@@ -19,17 +19,25 @@ theme:
         icon: material/brightness-4
         name: Hellmodus
   features:
+    - navigation.instant
+    - navigation.instant.progress
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
+    - navigation.path
     - navigation.top
     - navigation.indexes
+    - navigation.footer
     - search.highlight
     - search.suggest
     - search.share
     - content.code.copy
+    - content.tooltips
     - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   - search:
@@ -53,6 +61,7 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
+      toc_depth: 3
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -61,54 +70,54 @@ nav:
   - Startseite: index.md
   - 4. Semester:
     - Übersicht: 4-semester/index.md
-    - NeuNe — Neural Networks:
+    - Neural Networks:
       - Übersicht: 4-semester/neune/index.md
-      - Perceptron: 4-semester/neune/01-perceptron.md
-      - MLP & Backpropagation: 4-semester/neune/02-mlp.md
-      - Training Pipeline: 4-semester/neune/03-training.md
-      - CNN: 4-semester/neune/04-cnn.md
-      - RNN: 4-semester/neune/05-rnn.md
-      - NLP: 4-semester/neune/06-nlp.md
+      - 1. Perceptron: 4-semester/neune/01-perceptron.md
+      - 2. MLP & Backpropagation: 4-semester/neune/02-mlp.md
+      - 3. Training Pipeline: 4-semester/neune/03-training.md
+      - 4. CNN: 4-semester/neune/04-cnn.md
+      - 5. RNN: 4-semester/neune/05-rnn.md
+      - 6. NLP: 4-semester/neune/06-nlp.md
       - Prüfungstipps: 4-semester/neune/pruefungstipps.md
-    - OrgChem — Organische Chemie:
+    - Organische Chemie:
       - Übersicht: 4-semester/orgchem/index.md
-      - C-Bindungen & Hybridisierung: 4-semester/orgchem/01-bindungen.md
-      - IUPAC-Nomenklatur: 4-semester/orgchem/02-nomenklatur.md
-      - Isomerie: 4-semester/orgchem/03-isomerie.md
-      - Funktionelle Gruppen: 4-semester/orgchem/04-funktionelle-gruppen.md
-      - Reaktionen & Mechanismen: 4-semester/orgchem/05-reaktionen.md
-      - Chemisches Gleichgewicht: 4-semester/orgchem/06-gleichgewicht.md
+      - 1. C-Bindungen & Hybridisierung: 4-semester/orgchem/01-bindungen.md
+      - 2. IUPAC-Nomenklatur: 4-semester/orgchem/02-nomenklatur.md
+      - 3. Isomerie: 4-semester/orgchem/03-isomerie.md
+      - 4. Funktionelle Gruppen: 4-semester/orgchem/04-funktionelle-gruppen.md
+      - 5. Reaktionen & Mechanismen: 4-semester/orgchem/05-reaktionen.md
+      - 6. Chemisches Gleichgewicht: 4-semester/orgchem/06-gleichgewicht.md
       - Prüfungstipps: 4-semester/orgchem/pruefungstipps.md
-    - ISP — Image & Signal Processing:
+    - Image & Signal Processing:
       - Übersicht: 4-semester/isp/index.md
-      - Signalverarbeitung: 4-semester/isp/01-signalverarbeitung.md
-      - Bildverarbeitung: 4-semester/isp/02-bildverarbeitung.md
+      - 1. Signalverarbeitung: 4-semester/isp/01-signalverarbeitung.md
+      - 2. Bildverarbeitung: 4-semester/isp/02-bildverarbeitung.md
       - Prüfungstipps: 4-semester/isp/pruefungstipps.md
-    - MCS — Modellierung komplexer Systeme:
+    - Modellierung komplexer Systeme:
       - Übersicht: 4-semester/mcs/index.md
-      - Systemdynamik: 4-semester/mcs/01-systemdynamik.md
-      - Numerische Integration: 4-semester/mcs/02-numerische-integration.md
-      - Logistisches Wachstum: 4-semester/mcs/03-logistisches-wachstum.md
-      - Ernte-Modell & Bifurkation: 4-semester/mcs/04-ernte-modell.md
-      - 2-Populationen-Modell: 4-semester/mcs/05-populationen.md
-      - Chaos & Nichtlineare Systeme: 4-semester/mcs/06-chaos.md
+      - 1. Systemdynamik: 4-semester/mcs/01-systemdynamik.md
+      - 2. Numerische Integration: 4-semester/mcs/02-numerische-integration.md
+      - 3. Logistisches Wachstum: 4-semester/mcs/03-logistisches-wachstum.md
+      - 4. Ernte-Modell & Bifurkation: 4-semester/mcs/04-ernte-modell.md
+      - 5. 2-Populationen-Modell: 4-semester/mcs/05-populationen.md
+      - 6. Chaos & Nichtlineare Systeme: 4-semester/mcs/06-chaos.md
       - Prüfungstipps: 4-semester/mcs/pruefungstipps.md
-    - DaS — Data and Society:
+    - Data and Society:
       - Übersicht: 4-semester/das/index.md
-      - Die Macht der Daten: 4-semester/das/01-macht-der-daten.md
-      - Narrow Corridor: 4-semester/das/02-narrow-corridor.md
-      - Entscheidungsproblem & Turing: 4-semester/das/03-turing.md
-      - Algorithmen & Explore/Exploit: 4-semester/das/04-algorithmen.md
-      - Geschichte der KI: 4-semester/das/05-ki-geschichte.md
-      - Techno-Optimismus: 4-semester/das/06-techno-optimismus.md
-      - Kognitive Biases: 4-semester/das/07-kognitive-biases.md
+      - 1. Die Macht der Daten: 4-semester/das/01-macht-der-daten.md
+      - 2. Narrow Corridor: 4-semester/das/02-narrow-corridor.md
+      - 3. Entscheidungsproblem & Turing: 4-semester/das/03-turing.md
+      - 4. Algorithmen & Explore/Exploit: 4-semester/das/04-algorithmen.md
+      - 5. Geschichte der KI: 4-semester/das/05-ki-geschichte.md
+      - 6. Techno-Optimismus: 4-semester/das/06-techno-optimismus.md
+      - 7. Kognitive Biases: 4-semester/das/07-kognitive-biases.md
       - Prüfungstipps: 4-semester/das/pruefungstipps.md
-    - DSV — Digital Storytelling & Visualisation:
+    - Digital Storytelling & Visualisation:
       - Übersicht: 4-semester/dsv/index.md
-      - Data Storytelling Grundlagen: 4-semester/dsv/01-storytelling.md
-      - Author-Driven vs. Reader-Driven: 4-semester/dsv/02-author-reader.md
-      - Datenskalen (NOIR): 4-semester/dsv/03-datenskalen.md
-      - Visuelle Variablen (Bertin): 4-semester/dsv/04-visuelle-variablen.md
-      - Data-Ink Ratio & Chartjunk: 4-semester/dsv/05-data-ink.md
-      - Visualisierungs-Verzeichnis: 4-semester/dsv/06-visualisierungen.md
+      - 1. Data Storytelling Grundlagen: 4-semester/dsv/01-storytelling.md
+      - 2. Author-Driven vs. Reader-Driven: 4-semester/dsv/02-author-reader.md
+      - 3. Datenskalen (NOIR): 4-semester/dsv/03-datenskalen.md
+      - 4. Visuelle Variablen (Bertin): 4-semester/dsv/04-visuelle-variablen.md
+      - 5. Data-Ink Ratio & Chartjunk: 4-semester/dsv/05-data-ink.md
+      - 6. Visualisierungs-Verzeichnis: 4-semester/dsv/06-visualisierungen.md
       - Prüfungstipps: 4-semester/dsv/pruefungstipps.md

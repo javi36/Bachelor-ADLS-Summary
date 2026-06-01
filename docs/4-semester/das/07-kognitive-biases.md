@@ -1,4 +1,4 @@
-# SW13 — Kognitive Biases (Kahneman & Tversky)
+# 7. Kognitive Biases (Kahneman & Tversky)
 
 ## Daniel Kahneman — Biografie
 

@@ -1,4 +1,4 @@
-# Data-Ink Ratio & Chartjunk (Tufte)
+# 5. Data-Ink Ratio & Chartjunk (Tufte)
 
 *Edward Tufte — The Visual Display of Quantitative Information, 1983*
 

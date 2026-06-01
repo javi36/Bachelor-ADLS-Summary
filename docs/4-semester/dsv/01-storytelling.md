@@ -1,4 +1,4 @@
-# Data Storytelling — Grundlagen
+# 1. Data Storytelling — Grundlagen
 
 ## Definition (Dykes 2016)
 

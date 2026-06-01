@@ -1,4 +1,4 @@
-# SW05/06 — Algorithmen & Explore/Exploit
+# 4. Algorithmen & Explore/Exploit
 
 ## Multi-Armed Bandit Problem
 

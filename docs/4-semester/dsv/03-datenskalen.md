@@ -1,4 +1,4 @@
-# Datenskalen (NOIR) & Variablentypen
+# 3. Datenskalen (NOIR) & Variablentypen
 
 ## NOIR-Skalenniveau
 

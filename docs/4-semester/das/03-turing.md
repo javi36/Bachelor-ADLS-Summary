@@ -1,4 +1,4 @@
-# SW03/04 — Entscheidungsproblem & Turing-Maschinen
+# 3. Entscheidungsproblem & Turing-Maschinen
 
 ## Hilbert-Programm (SW03)
 

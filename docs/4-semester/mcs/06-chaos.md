@@ -1,4 +1,4 @@
-# Chaos & Nichtlineare Systeme
+# 6. Chaos & Nichtlineare Systeme
 
 ## Duffing-Gleichung (erzwungener Oszillator)
 

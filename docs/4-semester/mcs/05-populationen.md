@@ -1,4 +1,4 @@
-# 2-Populationen-Modell (Konkurrenz)
+# 5. 2-Populationen-Modell (Konkurrenz)
 
 ```
 dN₁/dt = r₁·N₁·(1 − N₁/K₁ − λ₁·N₂/K₁)

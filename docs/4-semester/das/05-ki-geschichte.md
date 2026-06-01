@@ -1,4 +1,4 @@
-# SW08 — Geschichte der KI (Walter Pitts)
+# 5. Geschichte der KI (Walter Pitts)
 
 ## Walter Pitts — Biografie
 

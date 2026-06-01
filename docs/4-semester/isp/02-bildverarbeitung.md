@@ -1,4 +1,4 @@
-# Teil II: Bildverarbeitung
+# 2. Bildverarbeitung
 
 ## Bildrepräsentation & Farbräume
 

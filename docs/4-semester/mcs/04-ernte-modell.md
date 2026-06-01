@@ -1,4 +1,4 @@
-# Ernte-Modell & Bifurkation
+# 4. Ernte-Modell & Bifurkation
 
 ## Logistisches Wachstum mit Ernte
 

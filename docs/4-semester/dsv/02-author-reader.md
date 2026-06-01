@@ -1,4 +1,4 @@
-# Author-Driven vs. Reader-Driven & Martini-Glass
+# 2. Author-Driven vs. Reader-Driven & Martini-Glass
 
 ## Spektrum (Segel & Heer 2010)
 

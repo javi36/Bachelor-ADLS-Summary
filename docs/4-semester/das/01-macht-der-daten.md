@@ -1,4 +1,4 @@
-# SW01 — Die Macht der Daten
+# 1. Die Macht der Daten
 
 - Lebenserwartung USA: 47.3 (1900) → 78 Jahre (2006) — Faktor 1.65 in 106 Jahren
 - Starke Korrelation: BIP pro Kopf ↑ → Lebenserwartung ↑

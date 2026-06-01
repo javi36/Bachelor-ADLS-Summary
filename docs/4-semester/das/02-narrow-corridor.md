@@ -1,4 +1,4 @@
-# SW02 — Narrow Corridor (Acemoglu & Robinson 2019)
+# 2. Narrow Corridor (Acemoglu & Robinson 2019)
 
 ## Kernthese
 

@@ -1,4 +1,4 @@
-# Verzeichnis der Visualisierungen
+# 6. Verzeichnis der Visualisierungen
 
 ## Numerische Einzelwerte
 

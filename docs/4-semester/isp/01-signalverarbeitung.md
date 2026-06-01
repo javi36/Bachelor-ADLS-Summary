@@ -1,4 +1,4 @@
-# Teil I: Signalverarbeitung
+# 1. Signalverarbeitung
 
 ## Signaltypen & Eigenschaften
 

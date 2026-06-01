@@ -1,4 +1,4 @@
-# Numerische Integration (Euler, RK2, RK4)
+# 2. Numerische Integration (Euler, RK2, RK4)
 
 ## Euler-Methode
 

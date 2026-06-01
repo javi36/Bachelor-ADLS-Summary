@@ -1,4 +1,4 @@
-# Logistisches Wachstum & Fixpunkte
+# 3. Logistisches Wachstum & Fixpunkte
 
 ## Logistisches Wachstumsmodell
 

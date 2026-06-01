@@ -1,4 +1,4 @@
-# SW10/12 — Techno-Optimismus & Produktivitäts-Bandwagon
+# 6. Techno-Optimismus & Produktivitäts-Bandwagon
 
 ## Produktivitäts-Bandwagon (Acemoglu & Johnson, *Power and Progress* 2023)
 

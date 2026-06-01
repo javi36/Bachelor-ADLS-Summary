@@ -1,4 +1,4 @@
-# Funktionelle Gruppen
+# 4. Funktionelle Gruppen
 
 | Klasse | Gruppe | Strukturformel | Suffix |
 |--------|--------|---------------|--------|

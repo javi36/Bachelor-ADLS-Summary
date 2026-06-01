@@ -1,4 +1,4 @@
-# Chemisches Gleichgewicht & Massenwirkungsgesetz
+# 6. Chemisches Gleichgewicht & Massenwirkungsgesetz
 
 ## Dynamisches Gleichgewicht
 

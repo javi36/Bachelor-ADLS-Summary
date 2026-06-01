@@ -1,4 +1,4 @@
-# Kohlenstoff-Bindungen, Hybridisierung & Allotrope
+# 1. Kohlenstoff-Bindungen, Hybridisierung & Allotrope
 
 ## Hybridisierung
 

@@ -6,10 +6,10 @@ Prüfungszusammenfassungen für den Studiengang **Applied Digital Life Science**
 
 | Semester | Status | Module |
 |----------|--------|--------|
-| [4. Semester](4-semester/index.md) | Verfügbar | NeuNe · OrgChem · ISP · MCS · DaS · DSV |
-| 3. Semester | — | — |
-| 2. Semester | — | — |
-| 1. Semester | — | — |
+| 1. Semester | — | Noch nicht verfügbar |
+| 2. Semester | — | Noch nicht verfügbar |
+| 3. Semester | — | Noch nicht verfügbar |
+| [4. Semester](4-semester/index.md) | Verfügbar | Neural Networks · Organische Chemie · Image & Signal Processing · Modellierung komplexer Systeme · Data and Society · Digital Storytelling & Visualisation |
 
 ---
 

@@ -1,4 +1,4 @@
-# MLP — Multilayer Perceptron & Backpropagation
+# 2. MLP — Multilayer Perceptron & Backpropagation
 
 ## Kuenstliches Neuron
 

@@ -1,4 +1,4 @@
-# CNN — Convolutional Neural Networks
+# 4. CNN — Convolutional Neural Networks
 
 ## Motivation
 

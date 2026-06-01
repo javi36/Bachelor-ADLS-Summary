@@ -1,4 +1,4 @@
-# Perceptron — Grundlagen & Lernregel
+# 1. Perceptron — Grundlagen & Lernregel
 
 ## Perceptron (Rosenblatt 1957)
 

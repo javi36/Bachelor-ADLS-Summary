@@ -1,4 +1,4 @@
-# NLP — Natural Language Processing
+# 6. NLP — Natural Language Processing
 
 ## NLP-Aufgaben
 

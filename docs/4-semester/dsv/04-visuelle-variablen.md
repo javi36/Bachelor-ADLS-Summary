@@ -1,4 +1,4 @@
-# Visuelle Variablen (Bertin)
+# 4. Visuelle Variablen (Bertin)
 
 ## Die 7 visuellen Variablen
 
