@@ -1,6 +1,6 @@
 # 6. Verzeichnis der Visualisierungen
 
-## Numerische Einzelwerte
+## 1. Numerische Einzelwerte
 
 | Charttyp | Variante | Verwendung |
 |---------|---------|-----------|
@@ -8,7 +8,7 @@
 | Histogram | Histogram, Density, CDF | Verteilung kontinuierlicher Variablen |
 | Boxplot / Violin Plot | — | Verteilung + Ausreisser |
 
-## Beziehungen zwischen Variablen
+## 2. Beziehungen zwischen Variablen
 
 | Fragestellung | Charttyp |
 |--------------|---------|
@@ -18,7 +18,7 @@
 | Kontinuierlich–diskret | Slope Graph |
 | Mehrere numerische Var. | Correlogram |
 
-## Anteile & Proportionen
+## 3. Anteile & Proportionen
 
 | Fragestellung | Charttyp |
 |--------------|---------|
@@ -26,7 +26,7 @@
 | Verschachtelte Anteile | Mosaic Plot, Treemap, Parallel Sets |
 | Mengenüberschneidungen | Venn-Diagramm |
 
-## Wahl des richtigen Charttyps
+## 4. Wahl des richtigen Charttyps
 
 | Frage | Empfehlung |
 |-------|----------|

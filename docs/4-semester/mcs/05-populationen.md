@@ -8,11 +8,11 @@ dN₂/dt = r₂·N₂·(1 − N₂/K₂ − λ₂·N₁/K₂)
 - λ₁: Konkurrenzstärke von N₂ auf N₁
 - λ₂: Konkurrenzstärke von N₁ auf N₂
 
-## Nullklinen (Isoklinien)
+## 1. Nullklinen (Isoklinien)
 
 Linie wo dN₁/dt = 0: N₁ = K₁ − λ₁·N₂
 
-## Koexistenz-Bedingungen
+## 2. Koexistenz-Bedingungen
 
 | Bedingung | Ergebnis |
 |-----------|---------|

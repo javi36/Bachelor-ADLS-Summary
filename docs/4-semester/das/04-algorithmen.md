@@ -1,6 +1,6 @@
 # 4. Algorithmen & Explore/Exploit
 
-## Multi-Armed Bandit Problem
+## 1. Multi-Armed Bandit Problem
 
 Wie viel **Exploration** (Neues ausprobieren) vs. **Exploitation** (Bestes nutzen)?
 
@@ -11,7 +11,7 @@ Wie viel **Exploration** (Neues ausprobieren) vs. **Exploitation** (Bestes nutze
 | Gittins Index | Optimale Strategie für diskontierte Belohnungen |
 | Thompson Sampling | Bayesianisch: Wahrscheinlichkeitsverteilung samplen |
 
-## Sortieralgorithmen
+## 2. Sortieralgorithmen
 
 | Algorithmus | Best | Avg | Worst |
 |------------|------|-----|-------|

@@ -1,6 +1,6 @@
 # 1. Signalverarbeitung
 
-## Signaltypen & Eigenschaften
+## 1. Signaltypen & Eigenschaften
 
 ### Signaltypen
 
@@ -38,7 +38,7 @@ x(t) = A · cos(2πft + φ) = A · cos(ωt + φ)
 
 ---
 
-## Abtastung & Interpolation
+## 2. Abtastung & Interpolation
 
 ### Nyquist-Shannon-Abtasttheorem
 
@@ -75,7 +75,7 @@ f_s ≥ 2 · f_max
 
 ---
 
-## Fourier-Reihen
+## 3. Fourier-Reihen
 
 ### Superpositionsprinzip
 
@@ -105,7 +105,7 @@ Jedes periodische Signal lässt sich als Summe von Sinusoiden darstellen (konstr
 
 ---
 
-## Fourier-Transformation
+## 4. Fourier-Transformation
 
 ### Kontinuierliche FT (CTFT)
 
@@ -147,7 +147,7 @@ x(t) = ∫ X(f) · e^{+j2πft} df   (Synthese / Rückwärts)
 
 ---
 
-## DFT, FFT & STFT
+## 5. DFT, FFT & STFT
 
 ### Diskrete Fourier-Transformation (DFT)
 
@@ -179,7 +179,7 @@ scipy.fft.fftfreq(N, d=1/f_s)
 
 ---
 
-## Faltung & Korrelation
+## 6. Faltung & Korrelation
 
 ### Faltung (Convolution)
 
@@ -220,7 +220,7 @@ R_xx(τ) = ∫ x*(t) · x(t+τ) dt
 
 ---
 
-## Filterung
+## 7. Filterung
 
 ### Spektrale Filtertypen
 
@@ -257,7 +257,7 @@ R_xx(τ) = ∫ x*(t) · x(t+τ) dt
 
 ---
 
-## sinc, Rauschen, Dezibel, Kompression
+## 8. sinc, Rauschen, Dezibel, Kompression
 
 ### sinc-Funktion
 

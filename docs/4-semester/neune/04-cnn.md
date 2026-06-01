@@ -1,12 +1,12 @@
 # 4. CNN — Convolutional Neural Networks
 
-## Motivation
+## 1. Motivation
 
 - **Lokale Rezeptivfelder**: Neuron sieht nur Teil des Bildes
 - **Geteilte Gewichte**: Gleicher Kernel über gesamtes Bild
 - **Translation-Invarianz**: Position-unabhängige Erkennung
 
-## Faltungsoperationen
+## 2. Faltungsoperationen
 
 **1D:**
 ```
@@ -23,7 +23,7 @@
 z_{i,j,d} = Σ_n Σ_k Σ_m X[i+n, j+k, m] · W[n,k,m,d] + b_d
 ```
 
-## Parameter einer Conv2D-Schicht
+## 3. Parameter einer Conv2D-Schicht
 
 | Parameter | Bedeutung | Keras-Default |
 |-----------|-----------|---------------|
@@ -32,26 +32,26 @@ z_{i,j,d} = Σ_n Σ_k Σ_m X[i+n, j+k, m] · W[n,k,m,d] + b_d
 | strides | Schrittweite | 1 |
 | padding | 'valid' oder 'same' | 'valid' |
 
-## Output-Grösse (ohne Padding)
+## 4. Output-Grösse (ohne Padding)
 
 ```
 output = floor((input − kernel) / stride) + 1
 ```
 
-## Anzahl Parameter (Conv-Schicht)
+## 5. Anzahl Parameter (Conv-Schicht)
 
 ```
 (kernel_h × kernel_w × in_channels + 1) × filters
 ```
 
-## Pooling
+## 6. Pooling
 
 | Typ | Operation |
 |-----|-----------|
 | Max Pooling | Maximum im Fenster — häufigste Wahl |
 | Average Pooling | Mittelwert im Fenster |
 
-## LeNet-5 Architektur
+## 7. LeNet-5 Architektur
 
 ```
 Input (32×32×1)
@@ -62,7 +62,7 @@ Input (32×32×1)
 → Flatten → Dense(120) → Dense(84) → Dense(10, Softmax)
 ```
 
-## Keras-Beispiel
+## 8. Keras-Beispiel
 
 ```python
 model = tf.keras.Sequential([

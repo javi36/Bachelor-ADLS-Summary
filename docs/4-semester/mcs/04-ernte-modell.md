@@ -1,17 +1,17 @@
 # 4. Ernte-Modell & Bifurkation
 
-## Logistisches Wachstum mit Ernte
+## 1. Logistisches Wachstum mit Ernte
 
 ```
 dN/dt = r·N·(1 − N/K) − h·N
 ```
 
-## Fixpunkte
+## 2. Fixpunkte
 
 - N* = 0
 - N* = K · (1 − h/r)   [nur real für h < r]
 
-## Stabilitätstabelle
+## 3. Stabilitätstabelle
 
 | Bedingung | N*=0 | N*=K(1−h/r) |
 |-----------|------|-------------|

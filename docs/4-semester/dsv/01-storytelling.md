@@ -1,6 +1,6 @@
 # 1. Data Storytelling — Grundlagen
 
-## Definition (Dykes 2016)
+## 1. Definition (Dykes 2016)
 
 !!! tip ""
     Data Storytelling = **Daten** + **Visuals** + **Narrative**
@@ -12,7 +12,7 @@
 | Daten + Narrative | Erklärung, kein visueller Anker |
 | Alle drei | **Wirkungsvolle Kommunikation** |
 
-## Narrative Konstituenten
+## 2. Narrative Konstituenten
 
 | Konstituente | Frage |
 |-------------|-------|

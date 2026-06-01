@@ -1,12 +1,12 @@
 # 5. Geschichte der KI (Walter Pitts)
 
-## Walter Pitts — Biografie
+## 1. Walter Pitts — Biografie
 
 - Autodidakt aus Detroit; las mit 12 Jahren Bertrand Russells Principia Mathematica
 - Zusammenarbeit mit Warren McCulloch → erstes mathematisches Neuronenmodell (1943)
 - Werk legte Grundstein für künstliche neuronale Netze
 
-## Verbindungskette zur KI
+## 2. Verbindungskette zur KI
 
 ```
 Principia Mathematica (Russell/Whitehead)

@@ -1,6 +1,6 @@
 # 2. Klassifikation & IUPAC-Nomenklatur
 
-## Systematik organischer Verbindungen
+## 1. Systematik organischer Verbindungen
 
 - **Aliphatisch**: Ketten ohne Ringe
     - Alkane: CₙH₂ₙ₊₂ (gesättigt)
@@ -9,14 +9,14 @@
 - **Zyklisch**: karbozyklisch (nur C) oder heterozyklisch (N, O, S im Ring)
 - **Aromatisch**: delokalisierte π-Elektronen, Hückel-Regel: 4n+2
 
-## IUPAC-Nomenklatur — 4 Schritte
+## 2. IUPAC-Nomenklatur — 4 Schritte
 
 1. **Hauptkette**: Längste ununterbrochene C-Kette bestimmen
 2. **Seitenketten**: Alphabetisch benennen (Ethyl vor Methyl)
 3. **Vielfachheit**: di-, tri-, tetra- (werden nicht alphabetisch gezählt)
 4. **Nummerierung**: Substituenten sollen kleinstmögliche Positionsnummern erhalten
 
-## Stammname nach C-Zahl
+## 3. Stammname nach C-Zahl
 
 | C | Präfix | C | Präfix |
 |---|--------|---|--------|

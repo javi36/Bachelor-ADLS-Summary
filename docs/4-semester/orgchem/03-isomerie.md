@@ -10,14 +10,14 @@ Isomerie
     └── Konformationsisomerie (Rotation, kein Bindungsbruch)
 ```
 
-## Chiralitätszentrum (R/S)
+## 1. Chiralitätszentrum (R/S)
 
 - sp³-C mit 4 verschiedenen Substituenten
 - **R** (rectus): Prioritäten 1→2→3 im Uhrzeigersinn
 - **S** (sinister): Prioritäten 1→2→3 gegen Uhrzeigersinn
 - CIP-Priorität: höhere Ordnungszahl = höhere Priorität
 
-## E/Z-Isomerie (Doppelbindungen)
+## 2. E/Z-Isomerie (Doppelbindungen)
 
 - **Z** (zusammen): höhere Prioritäten auf gleicher Seite
 - **E** (entgegen): höhere Prioritäten auf gegenüberliegenden Seiten

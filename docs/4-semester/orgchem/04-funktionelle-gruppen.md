@@ -14,7 +14,7 @@
 | Halogenid | Halogen | R–X | halo- |
 | Nitril | Cyano | R–C≡N | -nitril |
 
-## Reaktivitätsreihenfolge
+## 1. Reaktivitätsreihenfolge
 
 ```
 Carbonsäure > Ester ≈ Amid > Keton ≈ Aldehyd > Alkohol

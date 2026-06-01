@@ -1,6 +1,6 @@
 # 6. NLP — Natural Language Processing
 
-## NLP-Aufgaben
+## 1. NLP-Aufgaben
 
 | Aufgabe | Beschreibung |
 |---------|-------------|
@@ -13,14 +13,14 @@
 | Textzusammenfassung | Langer Text → kurze Zusammenfassung |
 | Textgenerierung | Nächstes Wort vorhersagen |
 
-## Text-Preprocessing Pipeline
+## 2. Text-Preprocessing Pipeline
 
 1. **Text laden**: Rohdaten als Strings
 2. **Tokenisierung**: Text → Liste von Tokens (Wörter/Zeichen)
 3. **Vokabular aufbauen**: Tokens → numerische Indizes
 4. **Vektorisierung**: Sequenzen numerischer Indizes → Modell-Input
 
-## Python Text-Preprocessing
+## 3. Python Text-Preprocessing
 
 ```python
 # Bereinigung: Grossbuchstaben-Header entfernen
@@ -33,7 +33,7 @@ sub_lines = [line for line in sub_lines if line.strip()]
 main_text_lines = sub_lines[16:-287]  # Metadaten abschneiden
 ```
 
-## TensorFlow tf.data
+## 4. TensorFlow tf.data
 
 ```python
 tf_dataset = tf.data.Dataset.from_tensor_slices(main_text_lines)

@@ -1,6 +1,6 @@
 # 5. Reaktionen & Mechanismen
 
-## Radikalische Halogenierung (Alkane)
+## 1. Radikalische Halogenierung (Alkane)
 
 Bedingungen: hν (UV-Licht) oder T > 300°C
 
@@ -10,7 +10,7 @@ Bedingungen: hν (UV-Licht) oder T > 300°C
 
 Stufenweise Chlorierung: CH₄ → CH₃Cl → CH₂Cl₂ → CHCl₃ → CCl₄
 
-## Reaktivität & Selektivität der Halogene
+## 2. Reaktivität & Selektivität der Halogene
 
 | Halogen | Reaktivität | Selektivität |
 |---------|------------|-------------|
@@ -19,7 +19,7 @@ Stufenweise Chlorierung: CH₄ → CH₃Cl → CH₂Cl₂ → CHCl₃ → CCl₄
 | Br₂ | Mittel | Hoch (tertiäre C bevorzugt) |
 | I₂ | Gering (endotherm) | Sehr hoch |
 
-## Wichtige Reaktionstypen
+## 3. Wichtige Reaktionstypen
 
 | Typ | Kürzel | Beispiel |
 |-----|--------|---------|

@@ -1,6 +1,6 @@
 # 6. Techno-Optimismus & Produktivitäts-Bandwagon
 
-## Produktivitäts-Bandwagon (Acemoglu & Johnson, *Power and Progress* 2023)
+## 1. Produktivitäts-Bandwagon (Acemoglu & Johnson, *Power and Progress* 2023)
 
 - In der Vergangenheit: Techno-Optimismus = neue Technologie führt immer zu geteiltem Wohlstand
 - Mechanismus: Neue Technologie → mehr Arbeitsnachfrage → höhere Löhne
@@ -8,7 +8,7 @@
 - Probleme können beide Verbindungen stören
 - Funktionierender Bandwagon-Effekt braucht **richtige gesellschaftliche und institutionelle Umgebung**
 
-## Kritik am Techno-Optimismus
+## 2. Kritik am Techno-Optimismus
 
 - Automatisierung kann Arbeit ersetzen statt ergänzen
 - Historische Beispiele: Industrialisierung → zuerst Lohnrückgang, dann langsam Erholung

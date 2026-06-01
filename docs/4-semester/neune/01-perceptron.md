@@ -1,6 +1,6 @@
 # 1. Perceptron — Grundlagen & Lernregel
 
-## Perceptron (Rosenblatt 1957)
+## 1. Perceptron (Rosenblatt 1957)
 
 Binaerer Klassifikator fuer linear trennbare Daten.
 
@@ -8,7 +8,7 @@ Binaerer Klassifikator fuer linear trennbare Daten.
 y = 1, falls w·x + b ≥ 0   |   y = 0, sonst
 ```
 
-## Lernregel (Gradientenabstieg)
+## 2. Lernregel (Gradientenabstieg)
 
 ```
 w ← w + η · (y_target − y_pred) · x
@@ -17,7 +17,7 @@ b ← b + η · (y_target − y_pred)
 
 η = Lernrate (typisch 0.01–0.1). Konvergiert **nur** bei linear trennbaren Daten.
 
-## Lineare Trennbarkeit
+## 3. Lineare Trennbarkeit
 
 | Problem | Linear trennbar? | Perceptron loesbar? |
 |---------|-----------------|---------------------|

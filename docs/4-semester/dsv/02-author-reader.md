@@ -1,6 +1,6 @@
 # 2. Author-Driven vs. Reader-Driven & Martini-Glass
 
-## Spektrum (Segel & Heer 2010)
+## 1. Spektrum (Segel & Heer 2010)
 
 | Dimension | Author-Driven | Reader-Driven |
 |-----------|--------------|--------------|
@@ -10,7 +10,7 @@
 | Medium | Video, Slides | Interaktives Dashboard |
 | Risiko | Langweilig | Verwirrend |
 
-## Martini-Glass-Struktur
+## 2. Martini-Glass-Struktur
 
 ```
    |   Enge Einleitung (Author-driven)
@@ -23,7 +23,7 @@
 !!! tip ""
     Martini-Glass = beste Strategie für Datenjournalismus: Erst die Botschaft einführen, dann den Nutzer erkunden lassen.
 
-## Typen nach Funktion
+## 3. Typen nach Funktion
 
 | Typ | Funktion | Interaktivität |
 |-----|---------|---------------|

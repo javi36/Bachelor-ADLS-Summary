@@ -1,6 +1,6 @@
 # 3. Datenskalen (NOIR) & Variablentypen
 
-## NOIR-Skalenniveau
+## 1. NOIR-Skalenniveau
 
 | Skala | Operationen | Lage | Variabilität |
 |-------|------------|------|------------|
@@ -9,13 +9,13 @@
 | **Intervall** | +, − | Arithm. Mittel | Standardabw. |
 | **Ratio** | ×, ÷ (echter Nullpunkt) | Geom. Mittel | Variationskoeff. |
 
-## Datentypen
+## 2. Datentypen
 
 - **Kategorisch (qualitativ)**: diskret + nominal/ordinal
 - **Numerisch (quantitativ)**: intervall oder ratio
 - **Strukturiert**: Tabellen, CSV; **Unstrukturiert**: Text, Bilder; **Semi-strukturiert**: XML, JSON
 
-## Beispiel
+## 3. Beispiel
 
 | Variable | Typ | Skala |
 |----------|-----|-------|

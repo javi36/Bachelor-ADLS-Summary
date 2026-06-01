@@ -2,7 +2,7 @@
 
 *Edward Tufte — The Visual Display of Quantitative Information, 1983*
 
-## Graphical Excellence
+## 1. Graphical Excellence
 
 !!! quote "Tufte"
     "The well-designed presentation of interesting data — a matter of substance, of statistics, and of design."
@@ -12,7 +12,7 @@
 
 - Clarity, precision, efficiency
 
-## Data-Ink Ratio
+## 2. Data-Ink Ratio
 
 ```
 Data-Ink Ratio = ink used to describe data / total ink used to print the graphic
@@ -24,7 +24,7 @@ Data-Ink Ratio = ink used to describe data / total ink used to print the graphic
 !!! tip "Regel"
     Maximize the data-ink ratio, within reason.
 
-## Chartjunk (Non-Data-Ink)
+## 3. Chartjunk (Non-Data-Ink)
 
 !!! quote "Tufte"
     "The interior decoration of graphics generates a lot of ink that does not tell the viewer anything new."

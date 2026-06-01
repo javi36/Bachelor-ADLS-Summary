@@ -1,6 +1,6 @@
 # 6. Chemisches Gleichgewicht & Massenwirkungsgesetz
 
-## Dynamisches Gleichgewicht
+## 1. Dynamisches Gleichgewicht
 
 Die meisten chemischen Reaktionen laufen **nicht vollständig** ab. Edukte und Produkte liegen nebeneinander vor.
 
@@ -8,7 +8,7 @@ Gleichgewichtszustand: v_hin = v_rück — Konzentrationen bleiben konstant, Rea
 
 Beispiel: N₂O₄ ⇌ 2 NO₂ (Gleichgewicht bei 25°C, K_c = 0.0047)
 
-## Massenwirkungsgesetz (MWG)
+## 2. Massenwirkungsgesetz (MWG)
 
 Gilt für jede reversible Reaktion im Gleichgewicht:
 
@@ -23,7 +23,7 @@ K_c(T) = [C]^c · [D]^d / ([A]^a · [B]^b)
 - Nenner: Edukte (stöchiometrische Koeffizienten als Exponenten)
 - Reaktionsrichtung angeben! K_hin = 1/K_rück
 
-## Reaktionsquotient Q
+## 3. Reaktionsquotient Q
 
 Wie K_c, aber mit beliebigen (nicht Gleichgewichts-)Konzentrationen:
 
@@ -31,7 +31,7 @@ Wie K_c, aber mit beliebigen (nicht Gleichgewichts-)Konzentrationen:
 - Q > K_c: Reaktion läuft rückwärts
 - Q = K_c: Gleichgewicht erreicht
 
-## Prinzip von Le Chatelier
+## 4. Prinzip von Le Chatelier
 
 Ein System im Gleichgewicht reagiert auf äussere Störungen so, dass es der Störung entgegenwirkt:
 
@@ -43,7 +43,7 @@ Ein System im Gleichgewicht reagiert auf äussere Störungen so, dass es der St�
 | Druck ↑ (Gase) | Seite mit weniger Gasmolekülen bevorzugt |
 | Katalysator | Kein Einfluss auf Gleichgewichtslage, nur auf Geschwindigkeit |
 
-## Bedeutung von K_c
+## 5. Bedeutung von K_c
 
 | K_c | Bedeutung |
 |-----|-----------|

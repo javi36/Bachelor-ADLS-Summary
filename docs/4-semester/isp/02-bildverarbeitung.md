@@ -1,6 +1,6 @@
 # 2. Bildverarbeitung
 
-## Bildrepräsentation & Farbräume
+## 1. Bildrepräsentation & Farbräume
 
 ### Digitale Bilder als Arrays
 
@@ -35,7 +35,7 @@ Beispiel: 1920×1080 RGB uint8 = 1920 × 1080 × 3 ≈ 6 MB
 
 ---
 
-## Bildqualitäts-Attribute
+## 2. Bildqualitäts-Attribute
 
 | Attribut | Beschreibung |
 |---------|-------------|
@@ -58,7 +58,7 @@ CNR = (μ_ROI − μ_background) / σ_background
 
 ---
 
-## Punktoperationen & Histogramme
+## 3. Punktoperationen & Histogramme
 
 ### Punktoperationen (pixelweise)
 
@@ -79,7 +79,7 @@ CNR = (μ_ROI − μ_background) / σ_background
 
 ---
 
-## Geometrische Transformationen & Affine Matrizen
+## 4. Geometrische Transformationen & Affine Matrizen
 
 ### Affine Transformationen
 
@@ -119,7 +119,7 @@ y = A·x + t — Homogene Form (3×3 Matrix, ermöglicht Translation):
 
 ---
 
-## 2D-Fourier & Spektralfilterung
+## 5. 2D-Fourier & Spektralfilterung
 
 ### 2D-Fourier-Transformation
 
@@ -145,7 +145,7 @@ F(u,v) = ΣΣ f(x,y) · e^{−j2π(ux/M + vy/N)}
 
 ---
 
-## 2D-Faltung & räumliche Filter
+## 6. 2D-Faltung & räumliche Filter
 
 ### 2D-Faltung
 
@@ -175,7 +175,7 @@ F(u,v) = ΣΣ f(x,y) · e^{−j2π(ux/M + vy/N)}
 
 ---
 
-## Kantendetektion
+## 7. Kantendetektion
 
 ### Methoden im Überblick
 
@@ -199,7 +199,7 @@ F(u,v) = ΣΣ f(x,y) · e^{−j2π(ux/M + vy/N)}
 
 ---
 
-## Feature-Erkennung & SIFT
+## 8. Feature-Erkennung & SIFT
 
 ### Lokale Features
 
@@ -226,7 +226,7 @@ F(u,v) = ΣΣ f(x,y) · e^{−j2π(ux/M + vy/N)}
 
 ---
 
-## Morphologische Operationen
+## 9. Morphologische Operationen
 
 ### Grundoperationen (auf Binärbildern)
 
@@ -263,7 +263,7 @@ Für jeden Vordergrundpixel: Distanz zum nächsten Hintergrundpixel → nützlic
 
 ---
 
-## Segmentierung
+## 10. Segmentierung
 
 | Methode | Prinzip | Stärke / Schwäche |
 |---------|---------|------------------|
@@ -277,7 +277,7 @@ Für jeden Vordergrundpixel: Distanz zum nächsten Hintergrundpixel → nützlic
 
 ---
 
-## Dateiformate & JPEG-Kompression
+## 11. Dateiformate & JPEG-Kompression
 
 ### Raster- vs. Vektorgrafiken
 
@@ -313,7 +313,7 @@ Für jeden Vordergrundpixel: Distanz zum nächsten Hintergrundpixel → nützlic
 
 ---
 
-## QR-Code
+## 12. QR-Code
 
 ### Grundlagen
 

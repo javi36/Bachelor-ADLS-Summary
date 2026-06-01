@@ -1,6 +1,6 @@
 # 4. Visuelle Variablen (Bertin)
 
-## Die 7 visuellen Variablen
+## 1. Die 7 visuellen Variablen
 
 | Variable | Deutsch | Beispiel | Geeignet für |
 |----------|---------|---------|-------------|
@@ -15,7 +15,7 @@
 !!! warning "Häufiger Fehler"
     Farbtöne (Hue) für ordinale/metrische Daten — Farben haben keine inhärente Reihenfolge. Für Rangfolgen → Helligkeit (Value) oder Grösse.
 
-## Formvariablen im Detail
+## 2. Formvariablen im Detail
 
 | Form | Implikation |
 |------|------------|

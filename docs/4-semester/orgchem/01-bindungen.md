@@ -1,6 +1,6 @@
 # 1. Kohlenstoff-Bindungen, Hybridisierung & Allotrope
 
-## Hybridisierung
+## 1. Hybridisierung
 
 | Hybr. | Bindungswinkel | Bindungstyp | Beispiel |
 |-------|---------------|-------------|---------|
@@ -8,7 +8,7 @@
 | sp² | 120° | 1 Doppelb. + 2 Einfachb., planar | Ethylen, Benzol |
 | sp | 180° | 1 Dreifachb. + 1 Einfachb., linear | Ethin HC≡CH |
 
-## Allotrope des Kohlenstoffs
+## 2. Allotrope des Kohlenstoffs
 
 | Allotrop | Hybr. | Struktur | Eigenschaft |
 |----------|-------|---------|------------|
@@ -18,7 +18,7 @@
 | Fulleren C₆₀ | sp² | 60 C-Atome, kugelförmig | 12 Fünf- + 20 Sechsringe |
 | CNT Nanoröhren | sp² | Gerolltes Graphen | Sehr zugfest, leitend/halbleitend |
 
-## Bindungsenthalpien (kJ/mol)
+## 3. Bindungsenthalpien (kJ/mol)
 
 | Bindung | kJ/mol | Bindung | kJ/mol |
 |---------|--------|---------|--------|

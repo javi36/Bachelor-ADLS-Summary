@@ -1,6 +1,6 @@
 # 3. Logistisches Wachstum & Fixpunkte
 
-## Logistisches Wachstumsmodell
+## 1. Logistisches Wachstumsmodell
 
 ```
 dN/dt = r · N · (1 − N/K)
@@ -9,13 +9,13 @@ dN/dt = r · N · (1 − N/K)
 - **r**: intrinsische Wachstumsrate
 - **K**: Tragfähigkeit (carrying capacity)
 
-## Analytische Lösung
+## 2. Analytische Lösung
 
 ```
 N(t) = K · N₀ · e^{rt} / (K − N₀(1 − e^{rt}))
 ```
 
-## Fixpunkte & Stabilität
+## 3. Fixpunkte & Stabilität
 
 | Fixpunkt | Stabilitätsbedingung |
 |---------|---------------------|

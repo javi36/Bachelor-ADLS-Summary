@@ -1,12 +1,12 @@
 # 2. MLP — Multilayer Perceptron & Backpropagation
 
-## Kuenstliches Neuron
+## 1. Kuenstliches Neuron
 
 ```
 y_i = σ( Σ_j w_{ij} · x_j + b_i )
 ```
 
-## Aktivierungsfunktionen
+## 2. Aktivierungsfunktionen
 
 | Funktion | Formel | Einsatz |
 |----------|--------|---------|
@@ -15,7 +15,7 @@ y_i = σ( Σ_j w_{ij} · x_j + b_i )
 | Tanh | (e^x−e^{-x})/(e^x+e^{-x}) | Hidden Layers |
 | Softmax | e^{x_i} / Σ e^{x_j} | Multi-Klassen Output |
 
-## Backpropagation
+## 3. Backpropagation
 
 1. Forward Pass: Vorhersage berechnen
 2. Loss berechnen: L(y_pred, y_true)

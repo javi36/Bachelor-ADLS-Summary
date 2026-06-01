@@ -1,6 +1,6 @@
 # 1. Systemdynamik — Grundelemente
 
-## Grundelemente (Stella / Vensim)
+## 1. Grundelemente (Stella / Vensim)
 
 | Element | Symbol | Bedeutung |
 |---------|--------|----------|
@@ -13,7 +13,7 @@
 Stock(t + Δt) = Stock(t) + (Inflows − Outflows) · Δt
 ```
 
-## Rückkopplungsschleifen
+## 2. Rückkopplungsschleifen
 
 - **Positiv (R-Loop / reinforcing)**: Verstärkend → exponentielles Wachstum/Zerfall
 - **Negativ (B-Loop / balancing)**: Ausgleichend → strebt zu Gleichgewicht
