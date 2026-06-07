@@ -13,3 +13,9 @@
 | [5. 2-Populationen-Modell](05-populationen.md) | Konkurrenz, Nullklinen, Koexistenz |
 | [6. Chaos & Nichtlineare Systeme](06-chaos.md) | Duffing, Lyapunov, Strange Attractor |
 | [Prüfungstipps](pruefungstipps.md) | Häufige Aufgaben & Fehler |
+
+## Ergänzende Unterlagen
+
+- [3Blue1Brown — Differential equations](https://www.3blue1brown.com/lessons/differential-equations) — visuelle Einführung in ODEs & numerische Methoden.
+- [SciPy — `solve_ivp`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html) — ODE-Löser in Python (RK45/RK23 u. a.) für die Modellierung.
+- [Complexity Explorer (Santa Fe Institute)](https://www.complexityexplorer.org/) — Online-Kurse zu komplexen Systemen, Chaos & agentenbasierter Modellierung.

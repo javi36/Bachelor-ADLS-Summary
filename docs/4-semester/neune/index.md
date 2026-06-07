@@ -13,3 +13,10 @@
 | [5. RNN](05-rnn.md) | Sequentielle Daten, Hidden State, FNN vs. RNN |
 | [6. NLP](06-nlp.md) | NLP-Aufgaben, Preprocessing, tf.data |
 | [Prüfungstipps](pruefungstipps.md) | Häufige Fragen & Fehler |
+
+## Ergänzende Unterlagen
+
+- [3Blue1Brown — But what is a Neural Network?](https://www.3blue1brown.com/lessons/neural-networks) — visuelle Einführung in Neuronen, Gewichte, Backpropagation.
+- [Deep Learning Book](https://www.deeplearningbook.org/) — Standardwerk von Goodfellow, Bengio & Courville (frei online, MIT Press).
+- [Stanford CS231n](https://cs231n.github.io/) — exzellente Kursnotizen zu CNNs & Deep Learning for Computer Vision.
+- [Distill.pub](https://distill.pub/) — anschaulich illustrierte ML-Forschungsartikel (Interpretierbarkeit, Architekturen).

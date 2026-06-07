@@ -10,6 +10,13 @@
 | [2. Bildverarbeitung](02-bildverarbeitung.md) | Farbräume, Punktoperationen, Geometrie, 2D-Fourier, Kantendetektion, SIFT, Morphologie, Segmentierung, JPEG, QR |
 | [Prüfungstipps](pruefungstipps.md) | Häufige Fragen & Python-Funktionen |
 
+## Ergänzende Unterlagen
+
+- [The Scientist and Engineer's Guide to DSP](https://www.dspguide.com/) — frei verfügbares Standardwerk zur digitalen Signalverarbeitung (Steven W. Smith).
+- [3Blue1Brown — But what is the Fourier Transform?](https://www.3blue1brown.com/lessons/fourier-transforms) — visuelle Einführung in die Fourier-Transformation.
+- [OpenCV-Python Tutorials](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html) — offizielle Tutorials zu Filterung, Geometrie & Feature-Erkennung.
+- [scikit-image — Beispielgalerie](https://scikit-image.org/docs/stable/auto_examples/) — Code-Beispiele zu Filtern, Kanten, Morphologie & Segmentierung.
+
 ## Notebooks — Signalverarbeitung
 
 | Notebook | Thema |

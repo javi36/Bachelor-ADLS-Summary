@@ -50,3 +50,8 @@ Ein System im Gleichgewicht reagiert auf äussere Störungen so, dass es der St�
 | K_c >> 1 | Produkte stark bevorzugt (Reaktion läuft fast vollständig ab) |
 | K_c << 1 | Edukte stark bevorzugt (kaum Produkte) |
 | K_c ≈ 1 | Edukte und Produkte ungefähr gleich |
+
+## Ergänzende Unterlagen
+
+- [LibreTexts — Chemical Equilibria](https://chem.libretexts.org/Bookshelves/General_Chemistry) → Kapitel *Equilibrium*: MWG, Q vs. K, Le Chatelier mit Rechenbeispielen.
+- [Khan Academy — Chemical Equilibrium](https://www.khanacademy.org/science/chemistry) — Videos & Übungen zu Gleichgewichtskonstante und Le-Chatelier-Prinzip.
